@@ -488,7 +488,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(190)))), ((int)(((byte)(210)))));
-            this.label18.Location = new System.Drawing.Point(245, 796);
+            this.label18.Location = new System.Drawing.Point(211, 788);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(268, 19);
             this.label18.TabIndex = 3;
