@@ -31,5 +31,35 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel35_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
