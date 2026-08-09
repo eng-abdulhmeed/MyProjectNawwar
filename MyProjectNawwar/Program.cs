@@ -16,7 +16,7 @@ namespace MyProjectNawwar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Regestr());
+            Application.Run(new Home());
         }
     }
 }

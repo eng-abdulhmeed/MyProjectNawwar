@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +72,21 @@
     <Compile Include="Regestr.Designer.cs">
       <DependentUpon>Regestr.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchSidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchSidebar.Designer.cs">
+      <DependentUpon>SearchSidebar.cs</DependentUpon>
+    </Compile>
     <Compile Include="SidebarMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SidebarMenu.Designer.cs">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="Regestr.resx">
       <DependentUpon>Regestr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchSidebar.resx">
+      <DependentUpon>SearchSidebar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SidebarMenu.resx">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
