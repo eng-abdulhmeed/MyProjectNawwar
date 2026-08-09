@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,27 +53,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -105,6 +105,17 @@
             this.pnlLeft.Size = new System.Drawing.Size(744, 1024);
             this.pnlLeft.TabIndex = 0;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.label13.Location = new System.Drawing.Point(431, 836);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 18);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Privacy Policy";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -115,6 +126,17 @@
             this.label11.Size = new System.Drawing.Size(129, 18);
             this.label11.TabIndex = 12;
             this.label11.Text = "Terms of Service";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
+            this.label12.Location = new System.Drawing.Point(401, 836);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 17);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "and";
             // 
             // label10
             // 
@@ -417,116 +439,39 @@
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
             this.pnlRight.TabIndex = 1;
             // 
-            // label12
+            // guna2Panel3
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(122)))), ((int)(((byte)(141)))));
-            this.label12.Location = new System.Drawing.Point(401, 836);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 17);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "and";
+            this.guna2Panel3.BorderRadius = 12;
+            this.guna2Panel3.Controls.Add(this.label23);
+            this.guna2Panel3.Controls.Add(this.label24);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(138, 677);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(420, 71);
+            this.guna2Panel3.TabIndex = 4;
             // 
-            // label13
+            // label23
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.label13.Location = new System.Drawing.Point(431, 836);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 18);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Privacy Policy";
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(61, 36);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(252, 17);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Network with thought leaders worldwide";
             // 
-            // label14
+            // label24
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(243, 197);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 33);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Nawwar";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(126, 263);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(432, 115);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Nawwar";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(141, 406);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(392, 26);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "The value-driven knowledge economy.";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(165, 444);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(332, 26);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Share, learn, and grow together.";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(190)))), ((int)(((byte)(210)))));
-            this.label18.Location = new System.Drawing.Point(211, 788);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(268, 19);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "© 2025 Nawwar. All rights reserved.";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderRadius = 12;
-            this.guna2Panel1.Controls.Add(this.label20);
-            this.guna2Panel1.Controls.Add(this.label19);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(138, 511);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(420, 71);
-            this.guna2Panel1.TabIndex = 4;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(60, 15);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(196, 21);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Share Your Expertise";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(61, 36);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(298, 17);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Share your knowledge with a global community";
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(60, 15);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(198, 21);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Connect with Experts";
             // 
             // guna2Panel2
             // 
@@ -562,39 +507,94 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Learn at Your Own Pace";
             // 
-            // guna2Panel3
+            // guna2Panel1
             // 
-            this.guna2Panel3.BorderRadius = 12;
-            this.guna2Panel3.Controls.Add(this.label23);
-            this.guna2Panel3.Controls.Add(this.label24);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(138, 677);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(420, 71);
-            this.guna2Panel3.TabIndex = 4;
+            this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.label20);
+            this.guna2Panel1.Controls.Add(this.label19);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(138, 511);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(420, 71);
+            this.guna2Panel1.TabIndex = 4;
             // 
-            // label23
+            // label20
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(61, 36);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(252, 17);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "Network with thought leaders worldwide";
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(61, 36);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(298, 17);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Share your knowledge with a global community";
             // 
-            // label24
+            // label19
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(60, 15);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(198, 21);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Connect with Experts";
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(60, 15);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(196, 21);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Share Your Expertise";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(190)))), ((int)(((byte)(210)))));
+            this.label18.Location = new System.Drawing.Point(229, 788);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(268, 19);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "© 2025 Nawwar. All rights reserved.";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(165, 444);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(332, 26);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Share, learn, and grow together.";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(141, 406);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(392, 26);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "The value-driven knowledge economy.";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(126, 263);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(432, 115);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Nawwar";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(243, 197);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(124, 33);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Nawwar";
             // 
             // Regestr
             // 
@@ -612,12 +612,12 @@
             this.pnlLeft.PerformLayout();
             this.pnlRight.ResumeLayout(false);
             this.pnlRight.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
