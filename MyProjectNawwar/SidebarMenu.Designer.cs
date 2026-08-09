@@ -204,9 +204,9 @@
             // 
             this.guna2Separator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 17);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 14);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(279, 37);
+            this.guna2Separator1.Size = new System.Drawing.Size(269, 37);
             this.guna2Separator1.TabIndex = 4;
             // 
             // btnProfilewd
@@ -265,12 +265,15 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.btnProfilewd);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 746);
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 594);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(268, 115);
             this.guna2Panel2.TabIndex = 8;
@@ -286,7 +289,7 @@
             this.guna2Panel3.Controls.Add(this.btnSessions);
             this.guna2Panel3.Controls.Add(this.btnBookmarks);
             this.guna2Panel3.Controls.Add(this.guna2Button2);
-            this.guna2Panel3.Location = new System.Drawing.Point(6, 51);
+            this.guna2Panel3.Location = new System.Drawing.Point(4, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(268, 503);
             this.guna2Panel3.TabIndex = 9;
@@ -296,8 +299,8 @@
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Graphic;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.CausesValidation = false;
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

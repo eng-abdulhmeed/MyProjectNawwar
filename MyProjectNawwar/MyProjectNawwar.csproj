@@ -70,6 +70,12 @@
     <Compile Include="Log_in.Designer.cs">
       <DependentUpon>Log_in.cs</DependentUpon>
     </Compile>
+    <Compile Include="Posts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Posts.Designer.cs">
+      <DependentUpon>Posts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Posts.resx">
+      <DependentUpon>Posts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
