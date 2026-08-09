@@ -40,7 +40,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(355, 1024);
+            this.guna2Panel1.Size = new System.Drawing.Size(355, 977);
             this.guna2Panel1.TabIndex = 2;
             // 
             // sidebarMenu1
@@ -53,15 +53,15 @@
             this.sidebarMenu1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.sidebarMenu1.Location = new System.Drawing.Point(0, 0);
             this.sidebarMenu1.Name = "sidebarMenu1";
-            this.sidebarMenu1.Size = new System.Drawing.Size(355, 1024);
+            this.sidebarMenu1.Size = new System.Drawing.Size(355, 977);
             this.sidebarMenu1.TabIndex = 0;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel2.Location = new System.Drawing.Point(977, 0);
+            this.guna2Panel2.Location = new System.Drawing.Point(959, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(463, 1024);
+            this.guna2Panel2.Size = new System.Drawing.Size(463, 977);
             this.guna2Panel2.TabIndex = 3;
             // 
             // Home
@@ -69,7 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1440, 1024);
+            this.ClientSize = new System.Drawing.Size(1422, 977);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
