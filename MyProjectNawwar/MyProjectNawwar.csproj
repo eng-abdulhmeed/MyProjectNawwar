@@ -116,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Regestr.resx">
       <DependentUpon>Regestr.cs</DependentUpon>
@@ -139,6 +140,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Frame.png" />
+    <Content Include="Resources\Frame8.png" />
+    <None Include="Resources\Frame81.png" />
+    <None Include="Resources\Frame31.png" />
+    <None Include="Resources\Frame21.png" />
+    <None Include="Resources\Frame1.png" />
+    <Content Include="Resources\Frame2.png" />
+    <Content Include="Resources\Frame3.png" />
+    <Content Include="Resources\Frame4.png" />
+    <Content Include="Resources\Frame5.png" />
+    <Content Include="Resources\Frame6.png" />
+    <Content Include="Resources\Frame7.png" />
+    <Content Include="Resources\Vector.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
