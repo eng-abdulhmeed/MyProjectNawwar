@@ -28,23 +28,28 @@ namespace MyProjectNawwar
 
         }
 
-     /*   private void sidebarMenu1_Load_1(object sender, EventArgs e, UserControl uc)
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-            // ضع هذه الدالة داخل كود النافذة الرئيسية (Form1.cs)
-           
-            
-                // 1. مسح أي محتوى سابق داخل اللوحة
-                MainPanel.Controls.Clear();
 
-                // 2. جعل الجزء الجديد يملأ مساحة اللوحة بالكامل
-                uc.Dock = DockStyle.Fill;
+        }
 
-                // 3. إضافة الجزء الجديد إلى اللوحة
-                MainPanel.Controls.Add(uc);
+        /*   private void sidebarMenu1_Load_1(object sender, EventArgs e, UserControl uc)
+           {
+               // ضع هذه الدالة داخل كود النافذة الرئيسية (Form1.cs)
 
-                // 4. جلبه للمقدمة للتأكد من ظهوره
-                uc.BringToFront();
-            }*/
-        
+
+                   // 1. مسح أي محتوى سابق داخل اللوحة
+                   MainPanel.Controls.Clear();
+
+                   // 2. جعل الجزء الجديد يملأ مساحة اللوحة بالكامل
+                   uc.Dock = DockStyle.Fill;
+
+                   // 3. إضافة الجزء الجديد إلى اللوحة
+                   MainPanel.Controls.Add(uc);
+
+                   // 4. جلبه للمقدمة للتأكد من ظهوره
+                   uc.BringToFront();
+               }*/
+
     }
 }
