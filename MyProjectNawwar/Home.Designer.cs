@@ -110,6 +110,7 @@
             this.MainPanelMain.Name = "MainPanelMain";
             this.MainPanelMain.Size = new System.Drawing.Size(592, 977);
             this.MainPanelMain.TabIndex = 4;
+            this.MainPanelMain.Visible = false;
             // 
             // MainPanel
             // 

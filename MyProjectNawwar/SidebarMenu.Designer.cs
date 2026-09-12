@@ -186,6 +186,7 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click_1);
             // 
             // btnStartSession
             // 

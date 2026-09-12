@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyProjectNawwar
@@ -18,62 +11,118 @@ namespace MyProjectNawwar
             InitializeComponent();
         }
 
-        // --- 1. دالة عرض الشاشات الجديدة (مثل Bookmarks و Profile) ---
-       /* public void LoadScreen(UserControl uc)
+        // =========================================================
+        // تحميل صفحة داخل MainPanelMain
+        // =========================================================
+        public void LoadScreen(UserControl uc)
         {
-            // إخفاء حاوية المنشورات لأننا سنعرض شاشة أخرى
-            flowLayoutPanel1.Visible = false;
-            MainPanel.Visible = true;
+            if (uc == null)
+                return;
 
-            // مسح أي محتوى سابق داخل اللوحة
-            MainPanel.Controls.Clear();
+            // MainPanelMain هو الـ Container الرئيسي
+            MainPanelMain.Visible = true;
 
-            // جعل الجزء الجديد يملأ مساحة اللوحة بالكامل
+            // إزالة الصفحة الحالية
+            ClearMainPanel();
+
+            // جعل الصفحة الجديدة تملأ المساحة
             uc.Dock = DockStyle.Fill;
 
-            // إضافة الجزء الجديد إلى اللوحة
-            MainPanel.Controls.Add(uc);
+            // إضافة الصفحة الجديدة
+            MainPanelMain.Controls.Add(uc);
 
-            // جلبه للمقدمة للتأكد من ظهوره
+            // إظهارها في المقدمة
             uc.BringToFront();
         }
-*/
-        // --- 2. دالة العودة للصفحة الرئيسية (المنشورات) ---
+
+        // =========================================================
+        // العودة إلى صفحة Home / المنشورات
+        // =========================================================
         public void ShowHomeFeed()
         {
-            // إخفاء حاوية الشاشات وإظهار حاوية المنشورات من جديد
-            MainPanelMain.Visible = false; // إخفاء الحاوية الجديدة
+            // التأكد أن الحاوية الرئيسية ظاهرة
+            MainPanelMain.Visible = true;
+
+            // إزالة الصفحة الحالية
+            ClearMainPanel();
+
+            // إعادة MainPanel الخاصة بالـ Home
+            MainPanel.Dock = DockStyle.Fill;
             MainPanel.Visible = true;
+
+            MainPanelMain.Controls.Add(MainPanel);
+            MainPanel.BringToFront();
         }
 
+        // =========================================================
+        // تنظيف MainPanelMain
+        // =========================================================
+        private void ClearMainPanel()
+        {
+            // ننسخ القائمة لأننا سنعدل Controls أثناء المرور عليها
+            Control[] controls = new Control[MainPanelMain.Controls.Count];
+
+            MainPanelMain.Controls.CopyTo(controls, 0);
+
+            foreach (Control control in controls)
+            {
+                MainPanelMain.Controls.Remove(control);
+
+                // لا نحذف MainPanel نفسه لأنه جزء من Home
+                // وسيتم استخدامه مرة أخرى عند الضغط على Home
+                if (control != MainPanel)
+                {
+                    control.Dispose();
+                }
+            }
+        }
+
+        // =========================================================
+        // تحميل الصفحة
+        // =========================================================
         private void Home_Load(object sender, EventArgs e)
         {
-            // في البداية نعرض المنشورات ونخفي الشاشات الأخرى
+            // عرض Home في البداية
             ShowHomeFeed();
+
+            // تنظيف المنشورات القديمة
             flowLayoutPanel1.Controls.Clear();
 
-            string connectionString = @"Server=.;Database=NawwarSystemDB;Trusted_Connection=True;Encrypt=False;";
+            string connectionString =
+                @"Server=.;Database=NawwarSystemDB;Trusted_Connection=True;Encrypt=False;";
+
             string query = @"
-            SELECT Posts.ID, Users.Full_Name, Users.Email, Posts.Title, Posts.Content_Body 
-            FROM Posts 
-            INNER JOIN Users ON Posts.Publisher_ID = Users.ID 
-            ORDER BY Posts.ID DESC";
+                SELECT 
+                    Posts.ID,
+                    Users.Full_Name,
+                    Users.Email,
+                    Posts.Title,
+                    Posts.Content_Body 
+                FROM Posts
+                INNER JOIN Users 
+                    ON Posts.Publisher_ID = Users.ID 
+                ORDER BY Posts.ID DESC";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     conn.Open();
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            post post = new post();
+                            post postControl = new post();
 
                             string email = reader["Email"].ToString();
-                            string extractedUsername = email.Contains("@") ? email.Split('@')[0] : email;
 
-                            post.SetPostData(
+                            string extractedUsername =
+                                email.Contains("@")
+                                ? email.Split('@')[0]
+                                : email;
+
+                            postControl.SetPostData(
                                 Convert.ToInt32(reader["ID"]),
                                 reader["Full_Name"].ToString(),
                                 "@" + extractedUsername,
@@ -82,37 +131,40 @@ namespace MyProjectNawwar
                                 reader["Content_Body"].ToString()
                             );
 
-                            flowLayoutPanel1.Controls.Add(post);
+                            flowLayoutPanel1.Controls.Add(postControl);
                         }
                     }
                 }
             }
         }
 
+        // =========================================================
+        // شاشة الترحيب
+        // =========================================================
         private void Home_Shown(object sender, EventArgs e)
         {
-            // استدعاء شاشة الترحيب
             WelcomeScreen welcome = new WelcomeScreen();
+
             welcome.Size = this.Size;
             welcome.Location = this.Location;
+
             welcome.Show(this);
         }
-        public void LoadScreen(UserControl uc)
-        {
-            MainPanel.Visible = false;
-            MainPanelMain.Visible = true; // استخدام الحاوية الجديدة
-            MainPanelMain.Controls.Clear();
 
-            uc.Dock = DockStyle.Fill;
-            MainPanelMain.Controls.Add(uc);
-            uc.BringToFront();
+        // =========================================================
+        // أحداث Designer
+        // =========================================================
+
+        private void sidebarMenu1_Load(object sender, EventArgs e)
+        {
         }
 
-       
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
 
-        // دوال فارغة يمكنك استخدامها لاحقاً أو تركها كما هي
-        private void sidebarMenu1_Load(object sender, EventArgs e) { }
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e) { }
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }
