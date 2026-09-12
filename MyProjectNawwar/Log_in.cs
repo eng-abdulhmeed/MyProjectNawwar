@@ -74,5 +74,10 @@ namespace MyProjectNawwar
                 this.Hide();
             
         }
+
+        private void pnlLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

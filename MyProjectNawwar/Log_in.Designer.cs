@@ -506,6 +506,7 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(744, 1024);
             this.pnlLeft.TabIndex = 2;
+            this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
             // label5
             // 
