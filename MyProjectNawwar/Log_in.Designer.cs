@@ -1,4 +1,4 @@
-﻿namespace MyProjectNawwar
+namespace MyProjectNawwar
 {
     partial class Log_in
     {
@@ -349,8 +349,7 @@
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(62, 331);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "you@example.com or +1 (555) 000-0000";
+            this.txtEmail.PlaceholderText = "name@example.com";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(480, 54);
             this.txtEmail.TabIndex = 5;
@@ -433,7 +432,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Email or Phone Number";
+            this.label4.Text = "EMAIL ADDRESS";
             // 
             // label3
             // 
@@ -506,6 +505,7 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(744, 1024);
             this.pnlLeft.TabIndex = 2;
+            this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
             // label5
             // 
