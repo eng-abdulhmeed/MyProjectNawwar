@@ -62,8 +62,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.pnlRight = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlRight = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -199,6 +199,7 @@
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign up";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Facebook
             // 
@@ -307,6 +308,7 @@
             this.LogIn.Size = new System.Drawing.Size(480, 57);
             this.LogIn.TabIndex = 6;
             this.LogIn.Text = "Log In";
+            this.LogIn.Click += new System.EventHandler(this.LogIn_Click);
             // 
             // txtPassword
             // 
@@ -505,6 +507,17 @@
             this.pnlLeft.Size = new System.Drawing.Size(744, 1024);
             this.pnlLeft.TabIndex = 2;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.label5.Location = new System.Drawing.Point(401, 511);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(141, 19);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Forgot Password?";
+            // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
@@ -520,17 +533,6 @@
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
             this.pnlRight.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.label5.Location = new System.Drawing.Point(401, 511);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 19);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Forgot Password?";
             // 
             // Log_in
             // 

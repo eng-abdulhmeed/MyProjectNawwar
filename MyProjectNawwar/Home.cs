@@ -33,6 +33,21 @@ namespace MyProjectNawwar
 
         }
 
+        private void Home_Shown(object sender, EventArgs e)
+        {
+            
+            // استدعاء شاشة الترحيب
+            WelcomeScreen welcome = new WelcomeScreen();
+
+            // جعل حجمها ومكانها يطابق تماماً شاشة الـ Home لتغطيها بالكامل
+            welcome.Size = this.Size;
+            welcome.Location = this.Location;
+
+            // إظهار الشاشة
+            welcome.Show(this);
+            
+        }
+
         /*   private void sidebarMenu1_Load_1(object sender, EventArgs e, UserControl uc)
            {
                // ضع هذه الدالة داخل كود النافذة الرئيسية (Form1.cs)
