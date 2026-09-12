@@ -66,5 +66,11 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void guna2PictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
