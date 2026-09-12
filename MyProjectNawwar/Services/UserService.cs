@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using Microsoft.Data.SqlClient;
-using MyProjectNawwar.Data; // تأكد من استبدال YourProjectName باسم مشروعك
+using MyProjectNawwar.Data;
 
 namespace MyProjectNawwar.Services
 {
@@ -71,6 +71,14 @@ namespace MyProjectNawwar.Services
         }
         public bool Register(string fullName, string email, string password, out string message)
         {
+            // التحقق من صحة صيغة البريد الإلكتروني
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            if (string.IsNullOrWhiteSpace(email) || !System.Text.RegularExpressions.Regex.IsMatch(email.Trim(), emailPattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            {
+                message = "صيغة البريد الإلكتروني غير صحيحة.";
+                return false;
+            }
+
             try
             {
                 // استدعاء الاتصال من DatabaseHelper كما فعلنا في تسجيل الدخول

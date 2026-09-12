@@ -1,4 +1,4 @@
-﻿namespace MyProjectNawwar
+namespace MyProjectNawwar
 {
     partial class Regestr
     {
@@ -69,6 +69,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblFullNameError = new System.Windows.Forms.Label();
+            this.lblEmailError = new System.Windows.Forms.Label();
+            this.lblPhoneError = new System.Windows.Forms.Label();
+            this.lblPasswordError = new System.Windows.Forms.Label();
+            this.lblConfirmError = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -91,6 +96,11 @@
             this.pnlLeft.Controls.Add(this.Facebook);
             this.pnlLeft.Controls.Add(this.Google);
             this.pnlLeft.Controls.Add(this.SignUp);
+            this.pnlLeft.Controls.Add(this.lblConfirmError);
+            this.pnlLeft.Controls.Add(this.lblPasswordError);
+            this.pnlLeft.Controls.Add(this.lblPhoneError);
+            this.pnlLeft.Controls.Add(this.lblEmailError);
+            this.pnlLeft.Controls.Add(this.lblFullNameError);
             this.pnlLeft.Controls.Add(this.txtConfirm);
             this.pnlLeft.Controls.Add(this.txtPassword);
             this.pnlLeft.Controls.Add(this.txtPhone);
@@ -251,9 +261,9 @@
             this.SignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.SignUp.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUp.ForeColor = System.Drawing.Color.White;
-            this.SignUp.Location = new System.Drawing.Point(63, 683);
+            this.SignUp.Location = new System.Drawing.Point(63, 672);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(480, 57);
+            this.SignUp.Size = new System.Drawing.Size(480, 55);
             this.SignUp.TabIndex = 6;
             this.SignUp.Text = "Sign Up";
             this.SignUp.Click += new System.EventHandler(this.SignUp_Click);
@@ -272,14 +282,27 @@
             this.txtConfirm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirm.Location = new System.Drawing.Point(63, 605);
+            this.txtConfirm.Location = new System.Drawing.Point(63, 587);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.PlaceholderText = "Repeat your password";
             this.txtConfirm.SelectedText = "";
-            this.txtConfirm.Size = new System.Drawing.Size(480, 54);
+            this.txtConfirm.Size = new System.Drawing.Size(480, 46);
             this.txtConfirm.TabIndex = 5;
             this.txtConfirm.UseSystemPasswordChar = true;
+            this.txtConfirm.TextChanged += new System.EventHandler(this.txtConfirm_TextChanged);
+            // 
+            // lblConfirmError
+            // 
+            this.lblConfirmError.AutoSize = true;
+            this.lblConfirmError.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmError.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblConfirmError.Location = new System.Drawing.Point(65, 635);
+            this.lblConfirmError.Name = "lblConfirmError";
+            this.lblConfirmError.Size = new System.Drawing.Size(0, 19);
+            this.lblConfirmError.TabIndex = 24;
+            this.lblConfirmError.Visible = false;
             // 
             // txtPassword
             // 
@@ -295,14 +318,27 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(63, 506);
+            this.txtPassword.Location = new System.Drawing.Point(63, 492);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "Create a strong password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(480, 54);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.Size = new System.Drawing.Size(480, 46);
+            this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            // 
+            // lblPasswordError
+            // 
+            this.lblPasswordError.AutoSize = true;
+            this.lblPasswordError.BackColor = System.Drawing.Color.Transparent;
+            this.lblPasswordError.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblPasswordError.Location = new System.Drawing.Point(65, 540);
+            this.lblPasswordError.Name = "lblPasswordError";
+            this.lblPasswordError.Size = new System.Drawing.Size(0, 19);
+            this.lblPasswordError.TabIndex = 23;
+            this.lblPasswordError.Visible = false;
             // 
             // txtPhone
             // 
@@ -318,13 +354,27 @@
             this.txtPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhone.Location = new System.Drawing.Point(63, 406);
+            this.txtPhone.Location = new System.Drawing.Point(63, 397);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.PlaceholderText = "+1 (555) 000-0000";
+            this.txtPhone.PlaceholderText = "+966500000000 or 0500000000";
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(480, 54);
-            this.txtPhone.TabIndex = 5;
+            this.txtPhone.Size = new System.Drawing.Size(480, 46);
+            this.txtPhone.TabIndex = 3;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
+            // 
+            // lblPhoneError
+            // 
+            this.lblPhoneError.AutoSize = true;
+            this.lblPhoneError.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneError.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblPhoneError.Location = new System.Drawing.Point(65, 445);
+            this.lblPhoneError.Name = "lblPhoneError";
+            this.lblPhoneError.Size = new System.Drawing.Size(0, 19);
+            this.lblPhoneError.TabIndex = 22;
+            this.lblPhoneError.Visible = false;
             // 
             // txtEmail
             // 
@@ -340,13 +390,26 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(63, 307);
+            this.txtEmail.Location = new System.Drawing.Point(63, 302);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "you@example.com";
+            this.txtEmail.PlaceholderText = "name@example.com";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(480, 54);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.Size = new System.Drawing.Size(480, 46);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            // 
+            // lblEmailError
+            // 
+            this.lblEmailError.AutoSize = true;
+            this.lblEmailError.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmailError.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblEmailError.Location = new System.Drawing.Point(65, 350);
+            this.lblEmailError.Name = "lblEmailError";
+            this.lblEmailError.Size = new System.Drawing.Size(0, 19);
+            this.lblEmailError.TabIndex = 21;
+            this.lblEmailError.Visible = false;
             // 
             // label7
             // 
@@ -354,7 +417,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(63, 579);
+            this.label7.Location = new System.Drawing.Point(63, 565);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 19);
             this.label7.TabIndex = 4;
@@ -366,7 +429,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(63, 480);
+            this.label6.Location = new System.Drawing.Point(63, 470);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 19);
             this.label6.TabIndex = 4;
@@ -378,7 +441,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(63, 380);
+            this.label5.Location = new System.Drawing.Point(63, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 19);
             this.label5.TabIndex = 4;
@@ -390,7 +453,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(63, 281);
+            this.label4.Location = new System.Drawing.Point(63, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 19);
             this.label4.TabIndex = 3;
@@ -608,11 +671,11 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(63, 187);
+            this.label25.Location = new System.Drawing.Point(63, 185);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(142, 19);
+            this.label25.Size = new System.Drawing.Size(107, 19);
             this.label25.TabIndex = 3;
-            this.label25.Text = "EMAIL ADDRESS";
+            this.label25.Text = "FULL NAME";
             // 
             // txtFullName
             // 
@@ -628,14 +691,27 @@
             this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Location = new System.Drawing.Point(63, 213);
+            this.txtFullName.Location = new System.Drawing.Point(63, 207);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PlaceholderText = "you@example.com";
+            this.txtFullName.PlaceholderText = "Enter your full name";
             this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(480, 54);
-            this.txtFullName.TabIndex = 5;
-            this.txtFullName.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtFullName.Size = new System.Drawing.Size(480, 46);
+            this.txtFullName.TabIndex = 1;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
+            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
+            // 
+            // lblFullNameError
+            // 
+            this.lblFullNameError.AutoSize = true;
+            this.lblFullNameError.BackColor = System.Drawing.Color.Transparent;
+            this.lblFullNameError.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullNameError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblFullNameError.Location = new System.Drawing.Point(65, 255);
+            this.lblFullNameError.Name = "lblFullNameError";
+            this.lblFullNameError.Size = new System.Drawing.Size(0, 19);
+            this.lblFullNameError.TabIndex = 20;
+            this.lblFullNameError.Visible = false;
             // 
             // Regestr
             // 
@@ -706,5 +782,10 @@
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblFullNameError;
+        private System.Windows.Forms.Label lblEmailError;
+        private System.Windows.Forms.Label lblPhoneError;
+        private System.Windows.Forms.Label lblPasswordError;
+        private System.Windows.Forms.Label lblConfirmError;
     }
 }

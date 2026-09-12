@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace MyProjectNawwar
 {
@@ -76,6 +77,11 @@ namespace MyProjectNawwar
         }
 
         private void pnlLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
         }

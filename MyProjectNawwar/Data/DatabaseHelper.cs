@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace MyProjectNawwar.MyProjectNawwar.Data // تأكد أن هذا يطابق مسار مجلد Data لديك
+namespace MyProjectNawwar.Data
 {
     public class DatabaseHelper
     {
