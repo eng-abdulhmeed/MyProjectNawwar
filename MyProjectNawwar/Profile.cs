@@ -15,6 +15,12 @@ namespace MyProjectNawwar
         public Profile()
         {
             InitializeComponent();
+            
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
