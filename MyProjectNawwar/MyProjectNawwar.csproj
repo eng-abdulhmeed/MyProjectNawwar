@@ -178,6 +178,12 @@
       <DependentUpon>Log_in.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\SessionManager.cs" />
+    <Compile Include="post.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="post.Designer.cs">
+      <DependentUpon>post.cs</DependentUpon>
+    </Compile>
     <Compile Include="Posts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="post.resx">
+      <DependentUpon>post.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Posts.resx">
       <DependentUpon>Posts.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +263,9 @@
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

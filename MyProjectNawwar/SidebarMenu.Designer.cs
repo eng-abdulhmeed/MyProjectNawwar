@@ -39,8 +39,8 @@
             this.btnStartSession = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnProfilewd = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblUserEmail = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -84,6 +84,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Home";
             this.btnHome.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnSessions
             // 
@@ -104,6 +105,7 @@
             this.btnSessions.Text = "Sessions";
             this.btnSessions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSessions.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnSessions.Click += new System.EventHandler(this.btnSessions_Click_1);
             // 
             // guna2Button2
             // 
@@ -143,6 +145,7 @@
             this.btnBookmarks.Text = "Bookmarks";
             this.btnBookmarks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBookmarks.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnBookmarks.Click += new System.EventHandler(this.btnBookmarks_Click_1);
             // 
             // btnDebateRooms
             // 
@@ -226,30 +229,30 @@
             this.btnProfilewd.TabIndex = 5;
             this.btnProfilewd.Text = "D";
             // 
-            // label2
+            // lblUserName
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(58, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "dev.abdh";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(58, 57);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(82, 22);
+            this.lblUserName.TabIndex = 6;
+            this.lblUserName.Text = "dev.abdh";
+            this.lblUserName.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lblUserEmail
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
-            this.label3.Location = new System.Drawing.Point(56, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "@dev.abdh";
+            this.lblUserEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserEmail.AutoSize = true;
+            this.lblUserEmail.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
+            this.lblUserEmail.Location = new System.Drawing.Point(56, 79);
+            this.lblUserEmail.Name = "lblUserEmail";
+            this.lblUserEmail.Size = new System.Drawing.Size(83, 18);
+            this.lblUserEmail.TabIndex = 6;
+            this.lblUserEmail.Text = "@dev.abdh";
             // 
             // label4
             // 
@@ -268,10 +271,10 @@
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Controls.Add(this.lblUserName);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
-            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.lblUserEmail);
             this.guna2Panel2.Controls.Add(this.btnProfilewd);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 594);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -330,8 +333,8 @@
         private Guna.UI2.WinForms.Guna2Button btnStartSession;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2CircleButton btnProfilewd;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblUserEmail;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
