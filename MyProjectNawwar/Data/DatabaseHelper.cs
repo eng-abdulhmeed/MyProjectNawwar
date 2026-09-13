@@ -7,7 +7,7 @@ namespace MyProjectNawwar.Data
     public class DatabaseHelper
     {
         // سلسلة الاتصال المعتمدة لكافة طبقات المشروع
-        public const string ConnectionString = "Server=.;Database=NawwarSystemDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False;";
+        public const string ConnectionString = "Server=DESKTOP-S4DSEJ1;Database=NawwarSystemDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False;";
 
         public SqlConnection GetConnection()
         {
