@@ -15,6 +15,17 @@ namespace MyProjectNawwar
         private void AboutControl_Load(object sender, EventArgs e)
         {
             picLogo.Image = AppAssets.Logo;
+
+            // تعيين صور الأفاتار للمطورين
+            if (picDev1 != null)
+            {
+                picDev1.Image = AvatarHelper.GenerateAvatar("Tariq Swar", picDev1.Width);
+            }
+
+            if (picDev2 != null)
+            {
+                picDev2.Image = AvatarHelper.GenerateAvatar("Abdulhmeed Abo-Hatem", picDev2.Width);
+            }
         }
     }
 }

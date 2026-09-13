@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using MyProjectNawwar.Data;
@@ -100,19 +101,52 @@ namespace MyProjectNawwar
 
         private void LoadPosts()
         {
+            SearchPosts(null);
+        }
+
+        // =========================================================
+        // البحث في المنشورات وتصفيتها
+        // =========================================================
+        public void SearchPosts(string keyword)
+        {
             flowLayoutPanel1.Controls.Clear();
 
-            string query = @"
-                SELECT 
-                    Posts.ID,
-                    Users.Full_Name,
-                    Users.Email,
-                    Posts.Title,
-                    Posts.Content_Body 
-                FROM Posts
-                INNER JOIN Users 
-                    ON Posts.Publisher_ID = Users.ID 
-                ORDER BY Posts.ID DESC";
+            bool isFiltered = !string.IsNullOrWhiteSpace(keyword);
+            string query;
+
+            if (!isFiltered)
+            {
+                query = @"
+                    SELECT 
+                        Posts.ID,
+                        Users.Full_Name,
+                        Users.Email,
+                        Posts.Title,
+                        Posts.Content_Body 
+                    FROM Posts
+                    INNER JOIN Users 
+                        ON Posts.Publisher_ID = Users.ID 
+                    ORDER BY Posts.ID DESC";
+            }
+            else
+            {
+                query = @"
+                    SELECT 
+                        Posts.ID,
+                        Users.Full_Name,
+                        Users.Email,
+                        Posts.Title,
+                        Posts.Content_Body 
+                    FROM Posts
+                    INNER JOIN Users 
+                        ON Posts.Publisher_ID = Users.ID 
+                    WHERE Posts.Title LIKE @Search 
+                       OR Posts.Content_Body LIKE @Search 
+                       OR Posts.Category LIKE @Search 
+                       OR Users.Full_Name LIKE @Search 
+                       OR Users.Email LIKE @Search
+                    ORDER BY Posts.ID DESC";
+            }
 
             try
             {
@@ -120,12 +154,20 @@ namespace MyProjectNawwar
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        if (isFiltered)
+                        {
+                            string cleanKw = keyword.Trim().TrimStart('#');
+                            cmd.Parameters.AddWithValue("@Search", "%" + cleanKw + "%");
+                        }
+
                         conn.Open();
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
+                            int matchCount = 0;
                             while (reader.Read())
                             {
+                                matchCount++;
                                 post postControl = new post();
 
                                 string email = reader["Email"].ToString();
@@ -141,6 +183,39 @@ namespace MyProjectNawwar
                                 );
 
                                 flowLayoutPanel1.Controls.Add(postControl);
+                            }
+
+                            if (matchCount == 0 && isFiltered)
+                            {
+                                Panel pnlEmpty = new Panel
+                                {
+                                    Size = new Size(flowLayoutPanel1.Width - 30, 160),
+                                    BackColor = Color.FromArgb(21, 34, 56),
+                                    Margin = new Padding(15, 20, 15, 20)
+                                };
+
+                                Label lblEmptyTitle = new Label
+                                {
+                                    Text = "🔍 لا توجد منشورات تطابق: \"" + keyword + "\"",
+                                    ForeColor = Color.FromArgb(226, 232, 240),
+                                    Font = new Font("Arial", 12, FontStyle.Bold),
+                                    Dock = DockStyle.Top,
+                                    Height = 50,
+                                    TextAlign = ContentAlignment.MiddleCenter
+                                };
+
+                                Label lblEmptySub = new Label
+                                {
+                                    Text = "جرب البحث بكلمات أخرى أو اختر أحد الموضوعات المتداولة في القائمة الجانبية.",
+                                    ForeColor = Color.FromArgb(175, 193, 208),
+                                    Font = new Font("Arial", 10, FontStyle.Regular),
+                                    Dock = DockStyle.Fill,
+                                    TextAlign = ContentAlignment.TopCenter
+                                };
+
+                                pnlEmpty.Controls.Add(lblEmptySub);
+                                pnlEmpty.Controls.Add(lblEmptyTitle);
+                                flowLayoutPanel1.Controls.Add(pnlEmpty);
                             }
                         }
                     }

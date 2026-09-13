@@ -1,4 +1,4 @@
-﻿namespace MyProjectNawwar
+namespace MyProjectNawwar
 {
     partial class SearchSidebar
     {
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblClearSearch = new System.Windows.Forms.Label();
             this.pnlTrending = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
@@ -72,24 +73,42 @@
             this.txtSearch.BorderRadius = 19;
             this.txtSearch.BorderThickness = 0;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "Search sessions, topics, or users...";
+            this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.txtSearch.Font = new System.Drawing.Font("Arial", 10F);
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(52, 63);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.txtSearch.Location = new System.Drawing.Point(52, 50);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(160)))), ((int)(((byte)(185)))));
+            this.txtSearch.PlaceholderText = "🔍 ابحث عن منشور، موضوع، أو كاتب...";
+            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(348, 39);
+            this.txtSearch.Size = new System.Drawing.Size(348, 42);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // lblClearSearch
+            // 
+            this.lblClearSearch.AutoSize = true;
+            this.lblClearSearch.BackColor = System.Drawing.Color.Transparent;
+            this.lblClearSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClearSearch.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblClearSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
+            this.lblClearSearch.Location = new System.Drawing.Point(54, 98);
+            this.lblClearSearch.Name = "lblClearSearch";
+            this.lblClearSearch.Size = new System.Drawing.Size(185, 18);
+            this.lblClearSearch.TabIndex = 2;
+            this.lblClearSearch.Text = "✕ إلغاء التصفية والعودة للكل";
+            this.lblClearSearch.Visible = false;
+            this.lblClearSearch.Click += new System.EventHandler(this.lblClearSearch_Click);
             // 
             // pnlTrending
             // 
@@ -120,18 +139,20 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
-            this.label10.Location = new System.Drawing.Point(33, 364);
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.label10.Location = new System.Drawing.Point(20, 364);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 21);
+            this.label10.Size = new System.Drawing.Size(260, 19);
             this.label10.TabIndex = 8;
-            this.label10.Text = "Show more";
+            this.label10.Text = "#هندسة_البرمجيات · #معمارية_النظم";
+            this.label10.Click += new System.EventHandler(this.Topic_Click);
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(68)))), ((int)(((byte)(76)))));
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 360);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 355);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(350, 1);
             this.guna2Separator1.TabIndex = 7;
@@ -140,54 +161,57 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
-            this.label6.Location = new System.Drawing.Point(143, 336);
+            this.label6.Location = new System.Drawing.Point(120, 325);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 21);
+            this.label6.Size = new System.Drawing.Size(125, 21);
             this.label6.TabIndex = 3;
-            this.label6.Text = "#covid19";
+            this.label6.Text = "#الأمن_السيبراني";
+            this.label6.Click += new System.EventHandler(this.Topic_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
-            this.label7.Location = new System.Drawing.Point(14, 336);
+            this.label7.Location = new System.Drawing.Point(14, 325);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 21);
+            this.label7.Size = new System.Drawing.Size(95, 19);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Trending with";
+            this.label7.Text = "وسم متداول:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label8.Location = new System.Drawing.Point(15, 213);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 21);
+            this.label8.Size = new System.Drawing.Size(175, 18);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Last night - COVID 19";
+            this.label8.Text = "أمن سيبراني ومعلومات · رائج";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.label9.Location = new System.Drawing.Point(14, 245);
+            this.label9.Location = new System.Drawing.Point(14, 235);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 91);
+            this.label9.Size = new System.Drawing.Size(225, 80);
             this.label9.TabIndex = 6;
-            this.label9.Text = "England’s Chief Medical Officer says the UK is at the most dangerous time of the " +
-    "pandemic";
+            this.label9.Text = "الأمان السيبراني وسلاسل الإمداد البرمجية والأنظمة السحابية";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // guna2Separator3
             // 
             this.guna2Separator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(68)))), ((int)(((byte)(76)))));
-            this.guna2Separator3.Location = new System.Drawing.Point(0, 210);
+            this.guna2Separator3.Location = new System.Drawing.Point(0, 205);
             this.guna2Separator3.Name = "guna2Separator3";
             this.guna2Separator3.Size = new System.Drawing.Size(350, 1);
             this.guna2Separator3.TabIndex = 2;
@@ -204,65 +228,64 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
-            this.label4.Location = new System.Drawing.Point(143, 186);
+            this.label4.Location = new System.Drawing.Point(120, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 21);
+            this.label4.Size = new System.Drawing.Size(142, 21);
             this.label4.TabIndex = 0;
-            this.label4.Text = "#covid19";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
+            this.label4.Text = "#الذكاء_الاصطناعي";
+            this.label4.Click += new System.EventHandler(this.Topic_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
-            this.label3.Location = new System.Drawing.Point(14, 186);
+            this.label3.Location = new System.Drawing.Point(14, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 21);
+            this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Trending with";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
+            this.label3.Text = "وسم متداول:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
-            this.label2.Location = new System.Drawing.Point(15, 64);
+            this.label2.Location = new System.Drawing.Point(15, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.Size = new System.Drawing.Size(176, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Last night - COVID 19";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
+            this.label2.Text = "ذكاء اصطناعي وتطوير · رائج";
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.label5.Location = new System.Drawing.Point(15, 95);
+            this.label5.Location = new System.Drawing.Point(15, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(224, 91);
+            this.label5.Size = new System.Drawing.Size(224, 80);
             this.label5.TabIndex = 0;
-            this.label5.Text = "England’s Chief Medical Officer says the UK is at the most dangerous time of the " +
-    "pandemic";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
+            this.label5.Text = "مستقبل هندسة البرمجيات في عصر الذكاء الاصطناعي التوليدي";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
             this.label1.Location = new System.Drawing.Point(16, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 28);
+            this.label1.Size = new System.Drawing.Size(262, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "What’s happening";
+            this.label1.Text = "🔥 موضوعات شائعة (Trending)";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Panel1
@@ -305,12 +328,13 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(92, 30);
             this.guna2Button2.TabIndex = 4;
-            this.guna2Button2.Text = "Follow";
+            this.guna2Button2.Text = "متابعة";
+            this.guna2Button2.Click += new System.EventHandler(this.btnFollow2_Click);
             // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.guna2Button1.BorderRadius = 15;
             this.guna2Button1.BorderThickness = 1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -318,25 +342,28 @@
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.guna2Button1.Location = new System.Drawing.Point(242, 61);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(92, 30);
             this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Follow";
+            this.guna2Button1.Text = "متابعة";
+            this.guna2Button1.Click += new System.EventHandler(this.btnFollow1_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
-            this.label15.Location = new System.Drawing.Point(33, 184);
+            this.label15.Location = new System.Drawing.Point(25, 184);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 21);
+            this.label15.Size = new System.Drawing.Size(150, 19);
             this.label15.TabIndex = 8;
-            this.label15.Text = "Show more";
+            this.label15.Text = "تصفح المزيد من الخبراء";
+            this.label15.Click += new System.EventHandler(this.lblShowMoreExperts_Click);
             // 
             // guna2Separator5
             // 
@@ -366,66 +393,65 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Tahoma", 8.5F);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label14.Location = new System.Drawing.Point(72, 144);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(155, 18);
             this.label14.TabIndex = 0;
-            this.label14.Text = "alessandroveronezi";
-            this.label14.Click += new System.EventHandler(this.label1_Click);
+            this.label14.Text = "@faisal.sh · أمن سيبراني";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(211)))), ((int)(((byte)(153)))));
             this.label20.Location = new System.Drawing.Point(16, 11);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(222, 28);
+            this.label20.Size = new System.Drawing.Size(305, 24);
             this.label20.TabIndex = 0;
-            this.label20.Text = "What’s happening";
-            this.label20.Click += new System.EventHandler(this.label1_Click);
+            this.label20.Text = "👥 خبراء مقترحون (Who to follow)";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.label13.Location = new System.Drawing.Point(82, 126);
+            this.label13.Location = new System.Drawing.Point(72, 124);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 18);
+            this.label13.Size = new System.Drawing.Size(115, 19);
             this.label13.TabIndex = 0;
-            this.label13.Text = "Bessie Cooper";
-            this.label13.Click += new System.EventHandler(this.label1_Click);
+            this.label13.Text = "أ. فيصل الشمري";
+            this.label13.Click += new System.EventHandler(this.Author2_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.5F);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
-            this.label12.Location = new System.Drawing.Point(72, 79);
+            this.label12.Location = new System.Drawing.Point(72, 80);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(155, 18);
             this.label12.TabIndex = 0;
-            this.label12.Text = "alessandroveronezi";
-            this.label12.Click += new System.EventHandler(this.label1_Click);
+            this.label12.Text = "@sara.ahmed · باحثة ذكاء";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.label11.Location = new System.Drawing.Point(82, 61);
+            this.label11.Location = new System.Drawing.Point(72, 59);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 18);
+            this.label11.Size = new System.Drawing.Size(109, 19);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Bessie Cooper";
-            this.label11.Click += new System.EventHandler(this.label1_Click);
+            this.label11.Text = "د. سارة الأحمد";
+            this.label11.Click += new System.EventHandler(this.Author1_Click);
             // 
             // guna2CirclePictureBox2
             // 
@@ -480,11 +506,13 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.Controls.Add(this.lblClearSearch);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlTrending);
             this.Controls.Add(this.txtSearch);
             this.Name = "SearchSidebar";
             this.Size = new System.Drawing.Size(458, 850);
+            this.Load += new System.EventHandler(this.SearchSidebar_Load);
             this.pnlTrending.ResumeLayout(false);
             this.pnlTrending.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
@@ -494,12 +522,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label lblClearSearch;
         private Guna.UI2.WinForms.Guna2Panel pnlTrending;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private System.Windows.Forms.Label label1;

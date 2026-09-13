@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.sidebarMenu1 = new MyProjectNawwar.SidebarMenu();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.searchSidebar1 = new MyProjectNawwar.SearchSidebar();
-            this.sidebarMenu1 = new MyProjectNawwar.SidebarMenu();
             this.MainPanelMain = new System.Windows.Forms.Panel();
             this.MainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -67,6 +67,21 @@
             this.guna2Panel1.Size = new System.Drawing.Size(355, 977);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // sidebarMenu1
+            // 
+            this.sidebarMenu1.AccessibleRole = System.Windows.Forms.AccessibleRole.Graphic;
+            this.sidebarMenu1.AutoScroll = true;
+            this.sidebarMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
+            this.sidebarMenu1.CausesValidation = false;
+            this.sidebarMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sidebarMenu1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sidebarMenu1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.sidebarMenu1.Location = new System.Drawing.Point(0, 0);
+            this.sidebarMenu1.Name = "sidebarMenu1";
+            this.sidebarMenu1.Size = new System.Drawing.Size(355, 977);
+            this.sidebarMenu1.TabIndex = 0;
+            this.sidebarMenu1.Load += new System.EventHandler(this.sidebarMenu1_Load_1);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.searchSidebar1);
@@ -86,20 +101,6 @@
             this.searchSidebar1.Name = "searchSidebar1";
             this.searchSidebar1.Size = new System.Drawing.Size(475, 977);
             this.searchSidebar1.TabIndex = 0;
-            // 
-            // sidebarMenu1
-            // 
-            this.sidebarMenu1.AccessibleRole = System.Windows.Forms.AccessibleRole.Graphic;
-            this.sidebarMenu1.AutoScroll = true;
-            this.sidebarMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(19)))), ((int)(((byte)(32)))));
-            this.sidebarMenu1.CausesValidation = false;
-            this.sidebarMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidebarMenu1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sidebarMenu1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.sidebarMenu1.Location = new System.Drawing.Point(0, 0);
-            this.sidebarMenu1.Name = "sidebarMenu1";
-            this.sidebarMenu1.Size = new System.Drawing.Size(355, 977);
-            this.sidebarMenu1.TabIndex = 0;
             // 
             // MainPanelMain
             // 

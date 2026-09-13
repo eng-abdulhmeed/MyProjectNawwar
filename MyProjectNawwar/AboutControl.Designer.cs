@@ -31,6 +31,16 @@ namespace MyProjectNawwar
             this.lblPillar2 = new System.Windows.Forms.Label();
             this.lblPillar3 = new System.Windows.Forms.Label();
             this.lblPillar4 = new System.Windows.Forms.Label();
+            this.pnlDevelopers = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDevTitle = new System.Windows.Forms.Label();
+            this.pnlDev1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.picDev1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblDev1Name = new System.Windows.Forms.Label();
+            this.lblDev1Email = new System.Windows.Forms.Label();
+            this.pnlDev2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.picDev2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblDev2Name = new System.Windows.Forms.Label();
+            this.lblDev2Email = new System.Windows.Forms.Label();
             this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.lblFooter = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
@@ -39,6 +49,11 @@ namespace MyProjectNawwar
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlVision.SuspendLayout();
             this.pnlPillars.SuspendLayout();
+            this.pnlDevelopers.SuspendLayout();
+            this.pnlDev1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDev1)).BeginInit();
+            this.pnlDev2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDev2)).BeginInit();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +61,7 @@ namespace MyProjectNawwar
             // 
             this.pnlContainer.AutoScroll = true;
             this.pnlContainer.Controls.Add(this.pnlFooter);
+            this.pnlContainer.Controls.Add(this.pnlDevelopers);
             this.pnlContainer.Controls.Add(this.pnlPillars);
             this.pnlContainer.Controls.Add(this.pnlVision);
             this.pnlContainer.Controls.Add(this.pnlHeader);
@@ -223,6 +239,131 @@ namespace MyProjectNawwar
             this.lblPillar4.Text = "4. توثيق المصادر (Verified Sources): ربط كل أطروحة ومساهمة بمراجع وأوراق بحثية قاب" +
     "لة للتحقق.";
             // 
+            // 
+            // pnlDevelopers
+            // 
+            this.pnlDevelopers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
+            this.pnlDevelopers.BorderRadius = 14;
+            this.pnlDevelopers.BorderThickness = 1;
+            this.pnlDevelopers.Controls.Add(this.lblDevTitle);
+            this.pnlDevelopers.Controls.Add(this.pnlDev1);
+            this.pnlDevelopers.Controls.Add(this.pnlDev2);
+            this.pnlDevelopers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlDevelopers.Location = new System.Drawing.Point(20, 655);
+            this.pnlDevelopers.Name = "pnlDevelopers";
+            this.pnlDevelopers.Size = new System.Drawing.Size(567, 215);
+            this.pnlDevelopers.TabIndex = 3;
+            // 
+            // lblDevTitle
+            // 
+            this.lblDevTitle.AutoSize = true;
+            this.lblDevTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblDevTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDevTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.lblDevTitle.Location = new System.Drawing.Point(24, 15);
+            this.lblDevTitle.Name = "lblDevTitle";
+            this.lblDevTitle.Size = new System.Drawing.Size(320, 24);
+            this.lblDevTitle.TabIndex = 0;
+            this.lblDevTitle.Text = "👨‍💻 فريق التطوير الهندسي | Development Team";
+            // 
+            // pnlDev1
+            // 
+            this.pnlDev1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
+            this.pnlDev1.BorderRadius = 10;
+            this.pnlDev1.BorderThickness = 1;
+            this.pnlDev1.Controls.Add(this.picDev1);
+            this.pnlDev1.Controls.Add(this.lblDev1Name);
+            this.pnlDev1.Controls.Add(this.lblDev1Email);
+            this.pnlDev1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.pnlDev1.Location = new System.Drawing.Point(20, 48);
+            this.pnlDev1.Name = "pnlDev1";
+            this.pnlDev1.Size = new System.Drawing.Size(527, 72);
+            this.pnlDev1.TabIndex = 1;
+            // 
+            // picDev1
+            // 
+            this.picDev1.BackColor = System.Drawing.Color.Transparent;
+            this.picDev1.ImageRotate = 0F;
+            this.picDev1.Location = new System.Drawing.Point(14, 12);
+            this.picDev1.Name = "picDev1";
+            this.picDev1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picDev1.Size = new System.Drawing.Size(48, 48);
+            this.picDev1.TabIndex = 0;
+            this.picDev1.TabStop = false;
+            // 
+            // lblDev1Name
+            // 
+            this.lblDev1Name.AutoSize = true;
+            this.lblDev1Name.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev1Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev1Name.ForeColor = System.Drawing.Color.White;
+            this.lblDev1Name.Location = new System.Drawing.Point(72, 12);
+            this.lblDev1Name.Name = "lblDev1Name";
+            this.lblDev1Name.Size = new System.Drawing.Size(212, 22);
+            this.lblDev1Name.TabIndex = 1;
+            this.lblDev1Name.Text = "1. طارق سوار | Tariq Swar";
+            // 
+            // lblDev1Email
+            // 
+            this.lblDev1Email.AutoSize = true;
+            this.lblDev1Email.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev1Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev1Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblDev1Email.Location = new System.Drawing.Point(72, 40);
+            this.lblDev1Email.Name = "lblDev1Email";
+            this.lblDev1Email.Size = new System.Drawing.Size(189, 18);
+            this.lblDev1Email.TabIndex = 2;
+            this.lblDev1Email.Text = "✉ eng.tariqswar@gmail.com";
+            // 
+            // pnlDev2
+            // 
+            this.pnlDev2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
+            this.pnlDev2.BorderRadius = 10;
+            this.pnlDev2.BorderThickness = 1;
+            this.pnlDev2.Controls.Add(this.picDev2);
+            this.pnlDev2.Controls.Add(this.lblDev2Name);
+            this.pnlDev2.Controls.Add(this.lblDev2Email);
+            this.pnlDev2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.pnlDev2.Location = new System.Drawing.Point(20, 130);
+            this.pnlDev2.Name = "pnlDev2";
+            this.pnlDev2.Size = new System.Drawing.Size(527, 72);
+            this.pnlDev2.TabIndex = 2;
+            // 
+            // picDev2
+            // 
+            this.picDev2.BackColor = System.Drawing.Color.Transparent;
+            this.picDev2.ImageRotate = 0F;
+            this.picDev2.Location = new System.Drawing.Point(14, 12);
+            this.picDev2.Name = "picDev2";
+            this.picDev2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picDev2.Size = new System.Drawing.Size(48, 48);
+            this.picDev2.TabIndex = 0;
+            this.picDev2.TabStop = false;
+            // 
+            // lblDev2Name
+            // 
+            this.lblDev2Name.AutoSize = true;
+            this.lblDev2Name.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev2Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev2Name.ForeColor = System.Drawing.Color.White;
+            this.lblDev2Name.Location = new System.Drawing.Point(72, 12);
+            this.lblDev2Name.Name = "lblDev2Name";
+            this.lblDev2Name.Size = new System.Drawing.Size(326, 22);
+            this.lblDev2Name.TabIndex = 1;
+            this.lblDev2Name.Text = "2. عبدالحميد أبوحاتم | Abdulhmeed Abo-Hatem";
+            // 
+            // lblDev2Email
+            // 
+            this.lblDev2Email.AutoSize = true;
+            this.lblDev2Email.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev2Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev2Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblDev2Email.Location = new System.Drawing.Point(72, 40);
+            this.lblDev2Email.Name = "lblDev2Email";
+            this.lblDev2Email.Size = new System.Drawing.Size(175, 18);
+            this.lblDev2Email.TabIndex = 2;
+            this.lblDev2Email.Text = "✉ eng.abdh.01@gmail.com";
+            // 
             // pnlFooter
             // 
             this.pnlFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
@@ -231,10 +372,10 @@ namespace MyProjectNawwar
             this.pnlFooter.Controls.Add(this.lblVersion);
             this.pnlFooter.Controls.Add(this.lblFooter);
             this.pnlFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.pnlFooter.Location = new System.Drawing.Point(20, 655);
+            this.pnlFooter.Location = new System.Drawing.Point(20, 885);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(567, 100);
-            this.pnlFooter.TabIndex = 3;
+            this.pnlFooter.TabIndex = 4;
             // 
             // lblFooter
             // 
@@ -276,6 +417,14 @@ namespace MyProjectNawwar
             this.pnlVision.PerformLayout();
             this.pnlPillars.ResumeLayout(false);
             this.pnlPillars.PerformLayout();
+            this.pnlDevelopers.ResumeLayout(false);
+            this.pnlDevelopers.PerformLayout();
+            this.pnlDev1.ResumeLayout(false);
+            this.pnlDev1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDev1)).EndInit();
+            this.pnlDev2.ResumeLayout(false);
+            this.pnlDev2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDev2)).EndInit();
             this.pnlFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -297,6 +446,16 @@ namespace MyProjectNawwar
         private System.Windows.Forms.Label lblPillar2;
         private System.Windows.Forms.Label lblPillar3;
         private System.Windows.Forms.Label lblPillar4;
+        private Guna.UI2.WinForms.Guna2Panel pnlDevelopers;
+        private System.Windows.Forms.Label lblDevTitle;
+        private Guna.UI2.WinForms.Guna2Panel pnlDev1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picDev1;
+        private System.Windows.Forms.Label lblDev1Name;
+        private System.Windows.Forms.Label lblDev1Email;
+        private Guna.UI2.WinForms.Guna2Panel pnlDev2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picDev2;
+        private System.Windows.Forms.Label lblDev2Name;
+        private System.Windows.Forms.Label lblDev2Email;
         private Guna.UI2.WinForms.Guna2Panel pnlFooter;
         private System.Windows.Forms.Label lblFooter;
         private System.Windows.Forms.Label lblVersion;

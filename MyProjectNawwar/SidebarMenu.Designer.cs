@@ -61,6 +61,7 @@ namespace MyProjectNawwar
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.guna2Panel1.Location = new System.Drawing.Point(25, 18);
             this.guna2Panel1.Name = "guna2Panel1";

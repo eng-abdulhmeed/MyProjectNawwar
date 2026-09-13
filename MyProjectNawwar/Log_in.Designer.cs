@@ -53,7 +53,6 @@ namespace MyProjectNawwar
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -74,6 +73,26 @@ namespace MyProjectNawwar
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // picLogoLeft
+            // 
+            this.picLogoLeft.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoLeft.Location = new System.Drawing.Point(62, 78);
+            this.picLogoLeft.Name = "picLogoLeft";
+            this.picLogoLeft.Size = new System.Drawing.Size(36, 36);
+            this.picLogoLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoLeft.TabIndex = 25;
+            this.picLogoLeft.TabStop = false;
+            // 
+            // picLogoRight
+            // 
+            this.picLogoRight.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoRight.Location = new System.Drawing.Point(280, 150);
+            this.picLogoRight.Name = "picLogoRight";
+            this.picLogoRight.Size = new System.Drawing.Size(100, 100);
+            this.picLogoRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoRight.TabIndex = 26;
+            this.picLogoRight.TabStop = false;
             // 
             // label17
             // 
@@ -353,6 +372,7 @@ namespace MyProjectNawwar
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Location = new System.Drawing.Point(62, 331);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "name@example.com";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(480, 54);
@@ -368,17 +388,6 @@ namespace MyProjectNawwar
             this.label16.Size = new System.Drawing.Size(392, 26);
             this.label16.TabIndex = 2;
             this.label16.Text = "The value-driven knowledge economy.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(243, 197);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 33);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Nawwar";
             // 
             // label6
             // 
@@ -434,7 +443,7 @@ namespace MyProjectNawwar
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(62, 305);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 19);
+            this.label4.Size = new System.Drawing.Size(142, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "EMAIL ADDRESS";
             // 
@@ -512,16 +521,6 @@ namespace MyProjectNawwar
             this.pnlLeft.TabIndex = 2;
             this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
-            // picLogoLeft
-            // 
-            this.picLogoLeft.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoLeft.Location = new System.Drawing.Point(62, 78);
-            this.picLogoLeft.Name = "picLogoLeft";
-            this.picLogoLeft.Size = new System.Drawing.Size(36, 36);
-            this.picLogoLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogoLeft.TabIndex = 25;
-            this.picLogoLeft.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -532,16 +531,6 @@ namespace MyProjectNawwar
             this.label5.Size = new System.Drawing.Size(141, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Forgot Password?";
-            // 
-            // picLogoRight
-            // 
-            this.picLogoRight.BackColor = System.Drawing.Color.Transparent;
-            this.picLogoRight.Location = new System.Drawing.Point(280, 150);
-            this.picLogoRight.Name = "picLogoRight";
-            this.picLogoRight.Size = new System.Drawing.Size(100, 100);
-            this.picLogoRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogoRight.TabIndex = 26;
-            this.picLogoRight.TabStop = false;
             // 
             // pnlRight
             // 
@@ -554,7 +543,6 @@ namespace MyProjectNawwar
             this.pnlRight.Controls.Add(this.label17);
             this.pnlRight.Controls.Add(this.label16);
             this.pnlRight.Controls.Add(this.label15);
-            this.pnlRight.Controls.Add(this.label14);
             this.pnlRight.Location = new System.Drawing.Point(735, -24);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
@@ -613,7 +601,6 @@ namespace MyProjectNawwar
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label23;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
