@@ -28,6 +28,8 @@ namespace MyProjectNawwar
         /// </summary>
         private void InitializeComponent()
         {
+            this.picLogoLeft = new System.Windows.Forms.PictureBox();
+            this.picLogoRight = new System.Windows.Forms.PictureBox();
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,6 +55,8 @@ namespace MyProjectNawwar
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoRight)).BeginInit();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -84,6 +88,7 @@ namespace MyProjectNawwar
             // pnlLeft
             // 
             this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlLeft.Controls.Add(this.picLogoLeft);
             this.pnlLeft.Controls.Add(this.label13);
             this.pnlLeft.Controls.Add(this.label11);
             this.pnlLeft.Controls.Add(this.label12);
@@ -118,6 +123,16 @@ namespace MyProjectNawwar
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(744, 1024);
             this.pnlLeft.TabIndex = 0;
+            // 
+            // picLogoLeft
+            // 
+            this.picLogoLeft.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoLeft.Location = new System.Drawing.Point(63, 33);
+            this.picLogoLeft.Name = "picLogoLeft";
+            this.picLogoLeft.Size = new System.Drawing.Size(36, 36);
+            this.picLogoLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoLeft.TabIndex = 25;
+            this.picLogoLeft.TabStop = false;
             // 
             // label13
             // 
@@ -495,6 +510,7 @@ namespace MyProjectNawwar
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.pnlRight.Controls.Add(this.picLogoRight);
             this.pnlRight.Controls.Add(this.guna2Panel3);
             this.pnlRight.Controls.Add(this.guna2Panel2);
             this.pnlRight.Controls.Add(this.guna2Panel1);
@@ -507,6 +523,16 @@ namespace MyProjectNawwar
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
             this.pnlRight.TabIndex = 1;
+            // 
+            // picLogoRight
+            // 
+            this.picLogoRight.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoRight.Location = new System.Drawing.Point(280, 150);
+            this.picLogoRight.Name = "picLogoRight";
+            this.picLogoRight.Size = new System.Drawing.Size(100, 100);
+            this.picLogoRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoRight.TabIndex = 26;
+            this.picLogoRight.TabStop = false;
             // 
             // guna2Panel3
             // 
@@ -787,5 +813,7 @@ namespace MyProjectNawwar
         private System.Windows.Forms.Label lblPhoneError;
         private System.Windows.Forms.Label lblPasswordError;
         private System.Windows.Forms.Label lblConfirmError;
+        private System.Windows.Forms.PictureBox picLogoLeft;
+        private System.Windows.Forms.PictureBox picLogoRight;
     }
 }

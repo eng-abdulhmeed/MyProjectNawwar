@@ -22,6 +22,12 @@ namespace MyProjectNawwar
         public Regestr()
         {
             InitializeComponent();
+            this.Icon = Helpers.AppAssets.AppIcon;
+            if (Helpers.AppAssets.Logo != null)
+            {
+                picLogoLeft.Image = Helpers.AppAssets.Logo;
+                picLogoRight.Image = Helpers.AppAssets.Logo;
+            }
         }
 
         // دالة مساعدة لإظهار الخطأ وتلوين إطار الحقل بالأحمر

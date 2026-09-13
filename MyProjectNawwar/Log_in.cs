@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +16,12 @@ namespace MyProjectNawwar
         public Log_in()
         {
             InitializeComponent();
+            this.Icon = Helpers.AppAssets.AppIcon;
+            if (Helpers.AppAssets.Logo != null)
+            {
+                picLogoLeft.Image = Helpers.AppAssets.Logo;
+                picLogoRight.Image = Helpers.AppAssets.Logo;
+            }
         }
 
         

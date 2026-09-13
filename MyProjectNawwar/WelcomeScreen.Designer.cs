@@ -1,4 +1,4 @@
-﻿namespace MyProjectNawwar
+namespace MyProjectNawwar
 {
     partial class WelcomeScreen
     {
@@ -31,15 +31,17 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.picWelcomeLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picWelcomeLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(164, 519);
+            this.lblWelcome.Location = new System.Drawing.Point(50, 520);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(301, 46);
+            this.lblWelcome.Size = new System.Drawing.Size(568, 90);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome Back";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,15 +58,25 @@
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Arial", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(212, 382);
+            this.label15.Location = new System.Drawing.Point(50, 400);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(432, 115);
+            this.label15.Size = new System.Drawing.Size(568, 100);
             this.label15.TabIndex = 1;
             this.label15.Text = "Nawwar";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // picWelcomeLogo
+            // 
+            this.picWelcomeLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picWelcomeLogo.Location = new System.Drawing.Point(264, 250);
+            this.picWelcomeLogo.Name = "picWelcomeLogo";
+            this.picWelcomeLogo.Size = new System.Drawing.Size(140, 140);
+            this.picWelcomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picWelcomeLogo.TabIndex = 5;
+            this.picWelcomeLogo.TabStop = false;
             // 
             // WelcomeScreen
             // 
@@ -72,6 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
             this.ClientSize = new System.Drawing.Size(800, 676);
+            this.Controls.Add(this.picWelcomeLogo);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.lblWelcome);
@@ -80,6 +93,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "WelcomeScreen";
             this.Load += new System.EventHandler(this.WelcomeScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picWelcomeLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,5 +103,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Panel pnlRight;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox picWelcomeLogo;
     }
 }

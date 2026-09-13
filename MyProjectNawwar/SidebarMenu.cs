@@ -1,9 +1,9 @@
-﻿
 using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using MyProjectNawwar.Helpers;
+using MyProjectNawwar.Models;
 
 namespace MyProjectNawwar
 {
@@ -19,45 +19,50 @@ namespace MyProjectNawwar
             btnBookmarks.Click += MenuButton_Click;
             btnDebateRooms.Click += MenuButton_Click;
             btnProfile.Click += MenuButton_Click;
+            guna2Button2.Click += MenuButton_Click;
+
+            // الاشتراك في حدث تحديث الجلسة لتحديث بيانات القائمة تلقائياً
+            SessionManager.OnSessionUpdated += SessionManager_OnSessionUpdated;
+        }
+
+        private void SessionManager_OnSessionUpdated()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(LoadUserData));
+            }
+            else
+            {
+                LoadUserData();
+            }
         }
 
         // =========================================================
-        // تحميل بيانات المستخدم
+        // تحميل بيانات المستخدم من الجلسة والشعار
         // =========================================================
         private void SidebarMenu_Load(object sender, EventArgs e)
         {
-            string connectionString =
-                @"Server=.;Database=NawwarSystemDB;Trusted_Connection=True;Encrypt=False;";
-
-            string loggedInUserId =
-                "11111111-1111-1111-1111-111111111111";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // وضع شعار المنصة في اللوحة العلوية
+            if (AppAssets.Logo != null)
             {
-                string query = @"
-                    SELECT Full_Name, Email
-                    FROM Users
-                    WHERE ID = @ID";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@ID", loggedInUserId);
-
-                    conn.Open();
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            lblUserName.Text =
-                                reader["Full_Name"].ToString();
-
-                            lblUserEmail.Text =
-                                reader["Email"].ToString();
-                        }
-                    }
-                }
+                guna2Panel1.BackgroundImage = AppAssets.Logo;
+                guna2Panel1.BackgroundImageLayout = ImageLayout.Zoom;
             }
+
+            LoadUserData();
+        }
+
+        public void LoadUserData()
+        {
+            string displayName = !string.IsNullOrEmpty(SessionManager.FullName) ? SessionManager.FullName : "مستخدم نَــــوّار";
+            string displayEmail = !string.IsNullOrEmpty(SessionManager.Email) ? SessionManager.Email : "@nawwar.com";
+
+            lblUserName.Text = displayName;
+            lblUserEmail.Text = displayEmail;
+
+            // توليد وتعيين أيقونة الحساب الدائرية بالحرف الأول (Twitter / Google style)
+            btnProfilewd.Image = AvatarHelper.GenerateAvatar(displayName, btnProfilewd.Width);
+            btnProfilewd.Text = string.Empty; // مسح النص واستبداله بصورة الحرف الدائرية
         }
 
         // =========================================================
@@ -65,9 +70,7 @@ namespace MyProjectNawwar
         // =========================================================
         private void MenuButton_Click(object sender, EventArgs e)
         {
-            Guna2Button clickedButton =
-                sender as Guna2Button;
-
+            Guna2Button clickedButton = sender as Guna2Button;
             if (clickedButton == null)
                 return;
 
@@ -75,14 +78,9 @@ namespace MyProjectNawwar
             ResetButtons();
 
             // تفعيل الزر الحالي
-            clickedButton.FillColor =
-                Color.FromArgb(33, 78, 125, 165);
-
-            clickedButton.ForeColor =
-                ColorTranslator.FromHtml("#4E7DA5");
-
-            clickedButton.Font =
-                new Font("Arial", 13, FontStyle.Bold);
+            clickedButton.FillColor = Color.FromArgb(33, 78, 125, 165);
+            clickedButton.ForeColor = ColorTranslator.FromHtml("#4E7DA5");
+            clickedButton.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
         }
 
         // =========================================================
@@ -96,18 +94,15 @@ namespace MyProjectNawwar
                 btnSessions,
                 btnBookmarks,
                 btnDebateRooms,
-                btnProfile
+                btnProfile,
+                guna2Button2 // About button
             };
 
             foreach (Guna2Button btn in buttons)
             {
                 btn.FillColor = Color.Transparent;
-
-                btn.ForeColor =
-                    ColorTranslator.FromHtml("#E2E8F0");
-
-                btn.Font =
-                    new Font("Arial", 13, FontStyle.Regular);
+                btn.ForeColor = ColorTranslator.FromHtml("#E2E8F0");
+                btn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             }
         }
 
@@ -125,7 +120,6 @@ namespace MyProjectNawwar
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home parent = GetHome();
-
             if (parent != null)
             {
                 parent.ShowHomeFeed();
@@ -138,11 +132,9 @@ namespace MyProjectNawwar
         private void btnSessions_Click_1(object sender, EventArgs e)
         {
             Home parent = GetHome();
-
             if (parent != null)
             {
-                // عندما تنشئ SessionsControl:
-                // parent.LoadScreen(new SessionsControl());
+                // يمكن تحميل شاشة الجلسات هنا عند توفرها
             }
         }
 
@@ -152,11 +144,9 @@ namespace MyProjectNawwar
         private void btnBookmarks_Click_1(object sender, EventArgs e)
         {
             Home parent = GetHome();
-
             if (parent != null)
             {
-                // عندما تنشئ BookmarksControl:
-                // parent.LoadScreen(new BookmarksControl());
+                // يمكن تحميل شاشة المحفوظات هنا
             }
         }
 
@@ -166,11 +156,9 @@ namespace MyProjectNawwar
         private void btnDebateRooms_Click(object sender, EventArgs e)
         {
             Home parent = GetHome();
-
             if (parent != null)
             {
-                // عندما تنشئ DebateRoomsControl:
-                // parent.LoadScreen(new DebateRoomsControl());
+                // يمكن تحميل شاشة المناظرات هنا
             }
         }
 
@@ -180,24 +168,33 @@ namespace MyProjectNawwar
         private void btnProfile_Click_1(object sender, EventArgs e)
         {
             Home parent = GetHome();
-
             if (parent != null)
             {
-                // عندما تنشئ ProfileControl:
-                 parent.LoadScreen(new Profile());
+                parent.LoadScreen(new Profile());
             }
         }
 
         // =========================================================
-        // أحداث Designer
+        // ABOUT US (عن المنصة)
         // =========================================================
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            Home parent = GetHome();
+            if (parent != null)
+            {
+                parent.LoadScreen(new AboutControl());
+            }
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
+            // النقر على اسم المستخدم في الأسفل يفتح صفحة البروفايل
+            btnProfile_Click_1(sender, e);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            btnProfile_Click_1(sender, e);
         }
     }
 }

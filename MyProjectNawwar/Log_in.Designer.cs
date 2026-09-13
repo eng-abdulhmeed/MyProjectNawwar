@@ -28,6 +28,8 @@ namespace MyProjectNawwar
         /// </summary>
         private void InitializeComponent()
         {
+            this.picLogoLeft = new System.Windows.Forms.PictureBox();
+            this.picLogoRight = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -64,6 +66,8 @@ namespace MyProjectNawwar
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoRight)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -493,6 +497,7 @@ namespace MyProjectNawwar
             this.pnlLeft.Controls.Add(this.Facebook);
             this.pnlLeft.Controls.Add(this.Google);
             this.pnlLeft.Controls.Add(this.LogIn);
+            this.pnlLeft.Controls.Add(this.picLogoLeft);
             this.pnlLeft.Controls.Add(this.txtPassword);
             this.pnlLeft.Controls.Add(this.txtEmail);
             this.pnlLeft.Controls.Add(this.label6);
@@ -507,6 +512,16 @@ namespace MyProjectNawwar
             this.pnlLeft.TabIndex = 2;
             this.pnlLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLeft_Paint);
             // 
+            // picLogoLeft
+            // 
+            this.picLogoLeft.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoLeft.Location = new System.Drawing.Point(62, 78);
+            this.picLogoLeft.Name = "picLogoLeft";
+            this.picLogoLeft.Size = new System.Drawing.Size(36, 36);
+            this.picLogoLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoLeft.TabIndex = 25;
+            this.picLogoLeft.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -518,9 +533,20 @@ namespace MyProjectNawwar
             this.label5.TabIndex = 2;
             this.label5.Text = "Forgot Password?";
             // 
+            // picLogoRight
+            // 
+            this.picLogoRight.BackColor = System.Drawing.Color.Transparent;
+            this.picLogoRight.Location = new System.Drawing.Point(280, 150);
+            this.picLogoRight.Name = "picLogoRight";
+            this.picLogoRight.Size = new System.Drawing.Size(100, 100);
+            this.picLogoRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogoRight.TabIndex = 26;
+            this.picLogoRight.TabStop = false;
+            // 
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.pnlRight.Controls.Add(this.picLogoRight);
             this.pnlRight.Controls.Add(this.guna2Panel3);
             this.pnlRight.Controls.Add(this.guna2Panel2);
             this.pnlRight.Controls.Add(this.guna2Panel1);
@@ -543,6 +569,8 @@ namespace MyProjectNawwar
             this.Controls.Add(this.pnlRight);
             this.Name = "Log_in";
             this.Text = "Log_in";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoRight)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -558,6 +586,9 @@ namespace MyProjectNawwar
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox picLogoLeft;
+        private System.Windows.Forms.PictureBox picLogoRight;
 
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;

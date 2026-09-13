@@ -1,6 +1,9 @@
-﻿using System;
-using System.Data.SqlClient;
+using System;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+using MyProjectNawwar.Data;
+using MyProjectNawwar.Helpers;
+using MyProjectNawwar.Models;
 
 namespace MyProjectNawwar
 {
@@ -19,19 +22,11 @@ namespace MyProjectNawwar
             if (uc == null)
                 return;
 
-            // MainPanelMain هو الـ Container الرئيسي
             MainPanelMain.Visible = true;
-
-            // إزالة الصفحة الحالية
             ClearMainPanel();
 
-            // جعل الصفحة الجديدة تملأ المساحة
             uc.Dock = DockStyle.Fill;
-
-            // إضافة الصفحة الجديدة
             MainPanelMain.Controls.Add(uc);
-
-            // إظهارها في المقدمة
             uc.BringToFront();
         }
 
@@ -40,18 +35,17 @@ namespace MyProjectNawwar
         // =========================================================
         public void ShowHomeFeed()
         {
-            // التأكد أن الحاوية الرئيسية ظاهرة
             MainPanelMain.Visible = true;
-
-            // إزالة الصفحة الحالية
             ClearMainPanel();
 
-            // إعادة MainPanel الخاصة بالـ Home
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Visible = true;
 
             MainPanelMain.Controls.Add(MainPanel);
             MainPanel.BringToFront();
+
+            // تحديث المنشورات عند العودة للرئيسية
+            LoadPosts();
         }
 
         // =========================================================
@@ -59,17 +53,13 @@ namespace MyProjectNawwar
         // =========================================================
         private void ClearMainPanel()
         {
-            // ننسخ القائمة لأننا سنعدل Controls أثناء المرور عليها
             Control[] controls = new Control[MainPanelMain.Controls.Count];
-
             MainPanelMain.Controls.CopyTo(controls, 0);
 
             foreach (Control control in controls)
             {
                 MainPanelMain.Controls.Remove(control);
 
-                // لا نحذف MainPanel نفسه لأنه جزء من Home
-                // وسيتم استخدامه مرة أخرى عند الضغط على Home
                 if (control != MainPanel)
                 {
                     control.Dispose();
@@ -82,14 +72,35 @@ namespace MyProjectNawwar
         // =========================================================
         private void Home_Load(object sender, EventArgs e)
         {
-            // عرض Home في البداية
+            this.Icon = AppAssets.AppIcon;
+
+            // التأكد من تحميل بيانات الجلسة إذا كانت فارغة
+            if (!SessionManager.IsLoggedIn)
+            {
+                try
+                {
+                    using (SqlConnection conn = DatabaseHelper.CreateConnection())
+                    {
+                        conn.Open();
+                        using (SqlCommand cmd = new SqlCommand("SELECT TOP 1 ID FROM Users WHERE Status = 'Active' ORDER BY Trust_Score DESC", conn))
+                        {
+                            object val = cmd.ExecuteScalar();
+                            if (val != null)
+                            {
+                                SessionManager.LoadUser(Guid.Parse(val.ToString()));
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+
             ShowHomeFeed();
+        }
 
-            // تنظيف المنشورات القديمة
+        private void LoadPosts()
+        {
             flowLayoutPanel1.Controls.Clear();
-
-            string connectionString =
-                @"Server=.;Database=NawwarSystemDB;Trusted_Connection=True;Encrypt=False;";
 
             string query = @"
                 SELECT 
@@ -103,38 +114,41 @@ namespace MyProjectNawwar
                     ON Posts.Publisher_ID = Users.ID 
                 ORDER BY Posts.ID DESC";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = DatabaseHelper.CreateConnection())
                 {
-                    conn.Open();
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        while (reader.Read())
+                        conn.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            post postControl = new post();
+                            while (reader.Read())
+                            {
+                                post postControl = new post();
 
-                            string email = reader["Email"].ToString();
+                                string email = reader["Email"].ToString();
+                                string extractedUsername = email.Contains("@") ? email.Split('@')[0] : email;
 
-                            string extractedUsername =
-                                email.Contains("@")
-                                ? email.Split('@')[0]
-                                : email;
+                                postControl.SetPostData(
+                                    Convert.ToInt32(reader["ID"]),
+                                    reader["Full_Name"].ToString(),
+                                    "@" + extractedUsername,
+                                    "الآن",
+                                    reader["Title"].ToString(),
+                                    reader["Content_Body"].ToString()
+                                );
 
-                            postControl.SetPostData(
-                                Convert.ToInt32(reader["ID"]),
-                                reader["Full_Name"].ToString(),
-                                "@" + extractedUsername,
-                                "الآن",
-                                reader["Title"].ToString(),
-                                reader["Content_Body"].ToString()
-                            );
-
-                            flowLayoutPanel1.Controls.Add(postControl);
+                                flowLayoutPanel1.Controls.Add(postControl);
+                            }
                         }
                     }
                 }
+            }
+            catch
+            {
+                // في حال حدوث خطأ أثناء جلب المنشورات
             }
         }
 
@@ -144,16 +158,10 @@ namespace MyProjectNawwar
         private void Home_Shown(object sender, EventArgs e)
         {
             WelcomeScreen welcome = new WelcomeScreen();
-
             welcome.Size = this.Size;
             welcome.Location = this.Location;
-
             welcome.Show(this);
         }
-
-        // =========================================================
-        // أحداث Designer
-        // =========================================================
 
         private void sidebarMenu1_Load(object sender, EventArgs e)
         {

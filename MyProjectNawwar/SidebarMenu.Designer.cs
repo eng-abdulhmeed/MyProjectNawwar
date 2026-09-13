@@ -1,4 +1,4 @@
-﻿namespace MyProjectNawwar
+namespace MyProjectNawwar
 {
     partial class SidebarMenu
     {
@@ -119,12 +119,14 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(13, 245);
+            this.guna2Button2.Location = new System.Drawing.Point(13, 437);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(242, 50);
             this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Sessions";
-            this.guna2Button2.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button2.Text = "About";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.TextOffset = new System.Drawing.Point(50, 0);
+            this.guna2Button2.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnBookmarks
             // 
@@ -198,7 +200,7 @@
             this.btnStartSession.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.btnStartSession.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStartSession.ForeColor = System.Drawing.Color.White;
-            this.btnStartSession.Location = new System.Drawing.Point(25, 437);
+            this.btnStartSession.Location = new System.Drawing.Point(25, 505);
             this.btnStartSession.Name = "btnStartSession";
             this.btnStartSession.Size = new System.Drawing.Size(226, 52);
             this.btnStartSession.TabIndex = 3;
@@ -277,7 +279,7 @@
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
             this.guna2Panel2.Controls.Add(this.lblUserEmail);
             this.guna2Panel2.Controls.Add(this.btnProfilewd);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 594);
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 580);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(268, 115);
             this.guna2Panel2.TabIndex = 8;
@@ -295,7 +297,7 @@
             this.guna2Panel3.Controls.Add(this.guna2Button2);
             this.guna2Panel3.Location = new System.Drawing.Point(4, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(268, 503);
+            this.guna2Panel3.Size = new System.Drawing.Size(268, 570);
             this.guna2Panel3.TabIndex = 9;
             // 
             // SidebarMenu
