@@ -579,6 +579,7 @@ namespace MyProjectNawwar
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
             this.pnlRight.TabIndex = 1;
+            this.pnlRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRight_Paint);
             // 
             // guna2Panel3
             // 
@@ -738,6 +739,7 @@ namespace MyProjectNawwar
             this.Name = "Regestr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Regestr";
+            this.Load += new System.EventHandler(this.Regestr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoRight)).EndInit();
             this.pnlLeft.ResumeLayout(false);

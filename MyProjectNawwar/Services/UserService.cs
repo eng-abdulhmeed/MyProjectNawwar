@@ -96,15 +96,20 @@ namespace MyProjectNawwar.Services
                     }
 
                     // 2. إدخال بيانات المستخدم الجديد
+
+                    // 2. إدخال بيانات المستخدم الجديد
                     string insertQuery = @"
-                        INSERT INTO Users (ID, Full_Name, Email, Password_Hash, Role_ID, Trust_Score, Total_Points, Status)
-                        VALUES (NEWID(), @FullName, @Email, @Password, 4, 100, 0, 'Active')";
+    INSERT INTO Users (ID, Full_Name, Email, Password_Hash, Role_ID, Trust_Score, Total_Points, Status)
+    VALUES (NEWID(), @FullName, @Email, @Password, @RoleID, 100, 0, 'Active')";
 
                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
                     {
                         insertCmd.Parameters.AddWithValue("@FullName", fullName.Trim());
                         insertCmd.Parameters.AddWithValue("@Email", email.Trim());
                         insertCmd.Parameters.AddWithValue("@Password", password);
+
+                        // تمرير رقم الصلاحية الصحيح للمستخدم العادي (تأكد أن رقمه 2 في قاعدة البيانات)
+                        insertCmd.Parameters.AddWithValue("@RoleID", 2);
 
                         int rowsAffected = insertCmd.ExecuteNonQuery();
 
@@ -119,6 +124,29 @@ namespace MyProjectNawwar.Services
                             return false;
                         }
                     }
+                    /* string insertQuery = @"
+                         INSERT INTO Users (ID, Full_Name, Email, Password_Hash, Role_ID, Trust_Score, Total_Points, Status)
+                         VALUES (NEWID(), @FullName, @Email, @Password, 4, 100, 0, 'Active')";
+
+                     using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                     {
+                         insertCmd.Parameters.AddWithValue("@FullName", fullName.Trim());
+                         insertCmd.Parameters.AddWithValue("@Email", email.Trim());
+                         insertCmd.Parameters.AddWithValue("@Password", password);
+
+                         int rowsAffected = insertCmd.ExecuteNonQuery();
+
+                         if (rowsAffected > 0)
+                         {
+                             message = "تم إنشاء الحساب بنجاح! يمكنك الآن تسجيل الدخول.";
+                             return true;
+                         }
+                         else
+                         {
+                             message = "حدث خطأ غير متوقع ولم يتم حفظ البيانات.";
+                             return false;
+                         }
+                     }*/
                 }
             }
             catch (Exception ex)

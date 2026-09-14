@@ -190,7 +190,7 @@ namespace MyProjectNawwar
                         {
                             cmd.Parameters.AddWithValue("@PostID", currentPostID);
                             cmd.Parameters.AddWithValue("@UserID", SessionManager.UserID);
-                            cmd.ExecuteNonQuery();
+                           cmd.ExecuteNonQuery();
                         }
 
                         isBookmarked = false;
@@ -305,6 +305,16 @@ namespace MyProjectNawwar
 
         private void guna2PictureBox8_MouseLeave(object sender, EventArgs e)
         {
+        }
+
+        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

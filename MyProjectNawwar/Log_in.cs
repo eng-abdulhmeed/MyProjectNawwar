@@ -91,5 +91,10 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void pnlRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

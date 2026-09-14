@@ -132,5 +132,10 @@ namespace MyProjectNawwar
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void pnlHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

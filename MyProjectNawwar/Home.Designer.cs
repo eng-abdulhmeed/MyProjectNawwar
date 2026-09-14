@@ -80,7 +80,7 @@
             this.sidebarMenu1.Name = "sidebarMenu1";
             this.sidebarMenu1.Size = new System.Drawing.Size(355, 977);
             this.sidebarMenu1.TabIndex = 0;
-          //  this.sidebarMenu1.Load += new System.EventHandler(this.sidebarMenu1_Load_1);
+            this.sidebarMenu1.Load += new System.EventHandler(this.sidebarMenu1_Load_1);
             // 
             // guna2Panel2
             // 

@@ -27,5 +27,10 @@ namespace MyProjectNawwar
                 picDev2.Image = AvatarHelper.GenerateAvatar("Abdulhmeed Abo-Hatem", picDev2.Width);
             }
         }
+
+        private void lblDev1Name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

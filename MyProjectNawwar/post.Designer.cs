@@ -41,6 +41,7 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblLikeCount2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLikeCount = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -53,7 +54,6 @@
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblLikeCount2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
@@ -76,6 +76,7 @@
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(672, 387);
             this.guna2Panel7.TabIndex = 10;
+            this.guna2Panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel7_Paint);
             // 
             // guna2Panel8
             // 
@@ -238,6 +239,18 @@
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(169, 26);
             this.guna2HtmlLabel17.TabIndex = 0;
             this.guna2HtmlLabel17.Text = "The Future of AI";
+            this.guna2HtmlLabel17.Click += new System.EventHandler(this.guna2HtmlLabel17_Click);
+            // 
+            // lblLikeCount2
+            // 
+            this.lblLikeCount2.BackColor = System.Drawing.Color.Transparent;
+            this.lblLikeCount2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLikeCount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
+            this.lblLikeCount2.Location = new System.Drawing.Point(594, 273);
+            this.lblLikeCount2.Name = "lblLikeCount2";
+            this.lblLikeCount2.Size = new System.Drawing.Size(33, 24);
+            this.lblLikeCount2.TabIndex = 0;
+            this.lblLikeCount2.Text = "125";
             // 
             // guna2HtmlLabel18
             // 
@@ -374,17 +387,6 @@
             this.guna2CirclePictureBox4.Size = new System.Drawing.Size(44, 44);
             this.guna2CirclePictureBox4.TabIndex = 11;
             this.guna2CirclePictureBox4.TabStop = false;
-            // 
-            // lblLikeCount2
-            // 
-            this.lblLikeCount2.BackColor = System.Drawing.Color.Transparent;
-            this.lblLikeCount2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLikeCount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
-            this.lblLikeCount2.Location = new System.Drawing.Point(594, 273);
-            this.lblLikeCount2.Name = "lblLikeCount2";
-            this.lblLikeCount2.Size = new System.Drawing.Size(33, 24);
-            this.lblLikeCount2.TabIndex = 0;
-            this.lblLikeCount2.Text = "125";
             // 
             // post
             // 

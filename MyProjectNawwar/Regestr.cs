@@ -330,5 +330,15 @@ namespace MyProjectNawwar
             // العودة لشاشة تسجيل الدخول عند النقر على Log in
             this.Close();
         }
+
+        private void pnlRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Regestr_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

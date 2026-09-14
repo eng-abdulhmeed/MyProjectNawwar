@@ -53,6 +53,7 @@ namespace MyProjectNawwar
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(480, 56);
             this.pnlHeader.TabIndex = 0;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
             // 
             // picLogo
             // 
@@ -70,7 +71,7 @@ namespace MyProjectNawwar
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(58, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(189, 24);
+            this.lblTitle.Size = new System.Drawing.Size(205, 24);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "تعديل الملف الشخصي | Edit";
             // 
@@ -114,7 +115,7 @@ namespace MyProjectNawwar
             this.labelName.ForeColor = System.Drawing.Color.White;
             this.labelName.Location = new System.Drawing.Point(40, 196);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(139, 18);
+            this.labelName.Size = new System.Drawing.Size(151, 18);
             this.labelName.TabIndex = 3;
             this.labelName.Text = "الاسم الكامل (Full Name)";
             // 
@@ -129,8 +130,8 @@ namespace MyProjectNawwar
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtFullName.ForeColor = System.Drawing.Color.White;
             this.txtFullName.Location = new System.Drawing.Point(40, 220);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFullName.PlaceholderText = "أدخل اسمك الكامل";
             this.txtFullName.SelectedText = "";
@@ -156,7 +157,7 @@ namespace MyProjectNawwar
             this.labelEmail.ForeColor = System.Drawing.Color.White;
             this.labelEmail.Location = new System.Drawing.Point(40, 290);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(189, 18);
+            this.labelEmail.Size = new System.Drawing.Size(202, 18);
             this.labelEmail.TabIndex = 6;
             this.labelEmail.Text = "البريد الإلكتروني (Email Address)";
             // 
@@ -171,8 +172,8 @@ namespace MyProjectNawwar
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Location = new System.Drawing.Point(40, 314);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.PlaceholderText = "name@example.com";
             this.txtEmail.SelectedText = "";
@@ -198,7 +199,7 @@ namespace MyProjectNawwar
             this.labelPass.ForeColor = System.Drawing.Color.White;
             this.labelPass.Location = new System.Drawing.Point(40, 384);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(262, 18);
+            this.labelPass.Size = new System.Drawing.Size(264, 18);
             this.labelPass.TabIndex = 9;
             this.labelPass.Text = "تغيير كلمة المرور (New Password - اختياري)";
             // 
@@ -213,6 +214,7 @@ namespace MyProjectNawwar
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(40, 408);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

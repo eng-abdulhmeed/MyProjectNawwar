@@ -249,5 +249,10 @@ namespace MyProjectNawwar
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void sidebarMenu1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

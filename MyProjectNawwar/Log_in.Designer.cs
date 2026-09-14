@@ -547,6 +547,7 @@ namespace MyProjectNawwar
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Size = new System.Drawing.Size(696, 1024);
             this.pnlRight.TabIndex = 3;
+            this.pnlRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRight_Paint);
             // 
             // Log_in
             // 

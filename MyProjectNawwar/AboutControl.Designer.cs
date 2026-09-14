@@ -17,20 +17,11 @@ namespace MyProjectNawwar
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutControl));
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.pnlVision = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblVisionTitle = new System.Windows.Forms.Label();
-            this.lblVisionDesc = new System.Windows.Forms.Label();
-            this.pnlPillars = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblPillarsTitle = new System.Windows.Forms.Label();
-            this.lblPillar1 = new System.Windows.Forms.Label();
-            this.lblPillar2 = new System.Windows.Forms.Label();
-            this.lblPillar3 = new System.Windows.Forms.Label();
-            this.lblPillar4 = new System.Windows.Forms.Label();
+            this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lblFooter = new System.Windows.Forms.Label();
             this.pnlDevelopers = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDevTitle = new System.Windows.Forms.Label();
             this.pnlDev1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -41,20 +32,30 @@ namespace MyProjectNawwar
             this.picDev2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblDev2Name = new System.Windows.Forms.Label();
             this.lblDev2Email = new System.Windows.Forms.Label();
-            this.pnlFooter = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblFooter = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
+            this.pnlPillars = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPillarsTitle = new System.Windows.Forms.Label();
+            this.lblPillar1 = new System.Windows.Forms.Label();
+            this.lblPillar2 = new System.Windows.Forms.Label();
+            this.lblPillar3 = new System.Windows.Forms.Label();
+            this.lblPillar4 = new System.Windows.Forms.Label();
+            this.pnlVision = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblVisionTitle = new System.Windows.Forms.Label();
+            this.lblVisionDesc = new System.Windows.Forms.Label();
+            this.pnlHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblSubtitle = new System.Windows.Forms.Label();
             this.pnlContainer.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.pnlVision.SuspendLayout();
-            this.pnlPillars.SuspendLayout();
+            this.pnlFooter.SuspendLayout();
             this.pnlDevelopers.SuspendLayout();
             this.pnlDev1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDev1)).BeginInit();
             this.pnlDev2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDev2)).BeginInit();
-            this.pnlFooter.SuspendLayout();
+            this.pnlPillars.SuspendLayout();
+            this.pnlVision.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -69,8 +70,287 @@ namespace MyProjectNawwar
             this.pnlContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlContainer.Size = new System.Drawing.Size(607, 950);
+            this.pnlContainer.Size = new System.Drawing.Size(607, 850);
             this.pnlContainer.TabIndex = 0;
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
+            this.pnlFooter.BorderRadius = 14;
+            this.pnlFooter.BorderThickness = 1;
+            this.pnlFooter.Controls.Add(this.lblVersion);
+            this.pnlFooter.Controls.Add(this.lblFooter);
+            this.pnlFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlFooter.Location = new System.Drawing.Point(20, 885);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(567, 100);
+            this.pnlFooter.TabIndex = 4;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersion.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblVersion.Location = new System.Drawing.Point(10, 52);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(547, 24);
+            this.lblVersion.TabIndex = 1;
+            this.lblVersion.Text = "System Version: 1.0 (Enterprise Edition)";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFooter
+            // 
+            this.lblFooter.BackColor = System.Drawing.Color.Transparent;
+            this.lblFooter.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
+            this.lblFooter.Location = new System.Drawing.Point(10, 20);
+            this.lblFooter.Name = "lblFooter";
+            this.lblFooter.Size = new System.Drawing.Size(547, 24);
+            this.lblFooter.TabIndex = 0;
+            this.lblFooter.Text = "© 2026 NAWWAR Knowledge Platform. All Rights Reserved.";
+            this.lblFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlDevelopers
+            // 
+            this.pnlDevelopers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
+            this.pnlDevelopers.BorderRadius = 14;
+            this.pnlDevelopers.BorderThickness = 1;
+            this.pnlDevelopers.Controls.Add(this.lblDevTitle);
+            this.pnlDevelopers.Controls.Add(this.pnlDev1);
+            this.pnlDevelopers.Controls.Add(this.pnlDev2);
+            this.pnlDevelopers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlDevelopers.Location = new System.Drawing.Point(20, 655);
+            this.pnlDevelopers.Name = "pnlDevelopers";
+            this.pnlDevelopers.Size = new System.Drawing.Size(567, 215);
+            this.pnlDevelopers.TabIndex = 3;
+            // 
+            // lblDevTitle
+            // 
+            this.lblDevTitle.AutoSize = true;
+            this.lblDevTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblDevTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDevTitle.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.lblDevTitle.Location = new System.Drawing.Point(24, 15);
+            this.lblDevTitle.Name = "lblDevTitle";
+            this.lblDevTitle.Size = new System.Drawing.Size(381, 24);
+            this.lblDevTitle.TabIndex = 0;
+            this.lblDevTitle.Text = "👨‍💻 فريق التطوير الهندسي | Development Team";
+            // 
+            // pnlDev1
+            // 
+            this.pnlDev1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
+            this.pnlDev1.BorderRadius = 10;
+            this.pnlDev1.BorderThickness = 1;
+            this.pnlDev1.Controls.Add(this.picDev1);
+            this.pnlDev1.Controls.Add(this.lblDev1Name);
+            this.pnlDev1.Controls.Add(this.lblDev1Email);
+            this.pnlDev1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.pnlDev1.Location = new System.Drawing.Point(20, 48);
+            this.pnlDev1.Name = "pnlDev1";
+            this.pnlDev1.Size = new System.Drawing.Size(527, 72);
+            this.pnlDev1.TabIndex = 1;
+            // 
+            // picDev1
+            // 
+            this.picDev1.BackColor = System.Drawing.Color.Transparent;
+            this.picDev1.ImageRotate = 0F;
+            this.picDev1.Location = new System.Drawing.Point(14, 12);
+            this.picDev1.Name = "picDev1";
+            this.picDev1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picDev1.Size = new System.Drawing.Size(48, 48);
+            this.picDev1.TabIndex = 0;
+            this.picDev1.TabStop = false;
+            // 
+            // lblDev1Name
+            // 
+            this.lblDev1Name.AutoSize = true;
+            this.lblDev1Name.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev1Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev1Name.ForeColor = System.Drawing.Color.White;
+            this.lblDev1Name.Location = new System.Drawing.Point(72, 12);
+            this.lblDev1Name.Name = "lblDev1Name";
+            this.lblDev1Name.Size = new System.Drawing.Size(115, 22);
+            this.lblDev1Name.TabIndex = 1;
+            this.lblDev1Name.Text = " Tariq Swar";
+            this.lblDev1Name.Click += new System.EventHandler(this.lblDev1Name_Click);
+            // 
+            // lblDev1Email
+            // 
+            this.lblDev1Email.AutoSize = true;
+            this.lblDev1Email.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev1Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev1Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblDev1Email.Location = new System.Drawing.Point(72, 40);
+            this.lblDev1Email.Name = "lblDev1Email";
+            this.lblDev1Email.Size = new System.Drawing.Size(212, 18);
+            this.lblDev1Email.TabIndex = 2;
+            this.lblDev1Email.Text = "✉ eng.tariqswar@gmail.com";
+            // 
+            // pnlDev2
+            // 
+            this.pnlDev2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
+            this.pnlDev2.BorderRadius = 10;
+            this.pnlDev2.BorderThickness = 1;
+            this.pnlDev2.Controls.Add(this.picDev2);
+            this.pnlDev2.Controls.Add(this.lblDev2Name);
+            this.pnlDev2.Controls.Add(this.lblDev2Email);
+            this.pnlDev2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
+            this.pnlDev2.Location = new System.Drawing.Point(20, 130);
+            this.pnlDev2.Name = "pnlDev2";
+            this.pnlDev2.Size = new System.Drawing.Size(527, 72);
+            this.pnlDev2.TabIndex = 2;
+            // 
+            // picDev2
+            // 
+            this.picDev2.BackColor = System.Drawing.Color.Transparent;
+            this.picDev2.ImageRotate = 0F;
+            this.picDev2.Location = new System.Drawing.Point(14, 12);
+            this.picDev2.Name = "picDev2";
+            this.picDev2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picDev2.Size = new System.Drawing.Size(48, 48);
+            this.picDev2.TabIndex = 0;
+            this.picDev2.TabStop = false;
+            // 
+            // lblDev2Name
+            // 
+            this.lblDev2Name.AutoSize = true;
+            this.lblDev2Name.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev2Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev2Name.ForeColor = System.Drawing.Color.White;
+            this.lblDev2Name.Location = new System.Drawing.Point(72, 12);
+            this.lblDev2Name.Name = "lblDev2Name";
+            this.lblDev2Name.Size = new System.Drawing.Size(236, 22);
+            this.lblDev2Name.TabIndex = 1;
+            this.lblDev2Name.Text = " Abdulhmeed Abo-Hatem";
+            // 
+            // lblDev2Email
+            // 
+            this.lblDev2Email.AutoSize = true;
+            this.lblDev2Email.BackColor = System.Drawing.Color.Transparent;
+            this.lblDev2Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDev2Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblDev2Email.Location = new System.Drawing.Point(72, 40);
+            this.lblDev2Email.Name = "lblDev2Email";
+            this.lblDev2Email.Size = new System.Drawing.Size(205, 18);
+            this.lblDev2Email.TabIndex = 2;
+            this.lblDev2Email.Text = "✉ eng.abdh.01@gmail.com";
+            // 
+            // pnlPillars
+            // 
+            this.pnlPillars.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
+            this.pnlPillars.BorderRadius = 14;
+            this.pnlPillars.BorderThickness = 1;
+            this.pnlPillars.Controls.Add(this.lblPillarsTitle);
+            this.pnlPillars.Controls.Add(this.lblPillar1);
+            this.pnlPillars.Controls.Add(this.lblPillar2);
+            this.pnlPillars.Controls.Add(this.lblPillar3);
+            this.pnlPillars.Controls.Add(this.lblPillar4);
+            this.pnlPillars.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlPillars.Location = new System.Drawing.Point(20, 400);
+            this.pnlPillars.Name = "pnlPillars";
+            this.pnlPillars.Size = new System.Drawing.Size(567, 240);
+            this.pnlPillars.TabIndex = 2;
+            // 
+            // lblPillarsTitle
+            // 
+            this.lblPillarsTitle.AutoSize = true;
+            this.lblPillarsTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblPillarsTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPillarsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
+            this.lblPillarsTitle.Location = new System.Drawing.Point(24, 18);
+            this.lblPillarsTitle.Name = "lblPillarsTitle";
+            this.lblPillarsTitle.Size = new System.Drawing.Size(178, 24);
+            this.lblPillarsTitle.TabIndex = 0;
+            this.lblPillarsTitle.Text = "💎 ركائز المنظومة الذكية";
+            // 
+            // lblPillar1
+            // 
+            this.lblPillar1.BackColor = System.Drawing.Color.Transparent;
+            this.lblPillar1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPillar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.lblPillar1.Location = new System.Drawing.Point(24, 55);
+            this.lblPillar1.Name = "lblPillar1";
+            this.lblPillar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPillar1.Size = new System.Drawing.Size(519, 36);
+            this.lblPillar1.TabIndex = 1;
+            this.lblPillar1.Text = "1. الجلسات المعرفية التفاعلية (Knowledge Sessions): ورش عمل ونقاشات حية بين الخبر" +
+    "اء والحضور.";
+            // 
+            // lblPillar2
+            // 
+            this.lblPillar2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPillar2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPillar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.lblPillar2.Location = new System.Drawing.Point(24, 98);
+            this.lblPillar2.Name = "lblPillar2";
+            this.lblPillar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPillar2.Size = new System.Drawing.Size(519, 36);
+            this.lblPillar2.TabIndex = 2;
+            this.lblPillar2.Text = "2. الغرف الحوارية المنظمة (Structured Debates): مناظرات فكرية وتقنية محكمة بالأدل" +
+    "ة والبراهين.";
+            // 
+            // lblPillar3
+            // 
+            this.lblPillar3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPillar3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPillar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.lblPillar3.Location = new System.Drawing.Point(24, 142);
+            this.lblPillar3.Name = "lblPillar3";
+            this.lblPillar3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPillar3.Size = new System.Drawing.Size(519, 36);
+            this.lblPillar3.TabIndex = 3;
+            this.lblPillar3.Text = "3. مؤشر الثقة والمصداقية (Trust Score): نظام سمعة ذكي يمنح النقاط بناءً على جودة " +
+    "الطرح والتوثيق.";
+            // 
+            // lblPillar4
+            // 
+            this.lblPillar4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPillar4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPillar4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.lblPillar4.Location = new System.Drawing.Point(24, 186);
+            this.lblPillar4.Name = "lblPillar4";
+            this.lblPillar4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPillar4.Size = new System.Drawing.Size(519, 36);
+            this.lblPillar4.TabIndex = 4;
+            this.lblPillar4.Text = "4. توثيق المصادر (Verified Sources): ربط كل أطروحة ومساهمة بمراجع وأوراق بحثية قا" +
+    "بلة للتحقق.";
+            // 
+            // pnlVision
+            // 
+            this.pnlVision.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
+            this.pnlVision.BorderRadius = 14;
+            this.pnlVision.BorderThickness = 1;
+            this.pnlVision.Controls.Add(this.lblVisionTitle);
+            this.pnlVision.Controls.Add(this.lblVisionDesc);
+            this.pnlVision.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
+            this.pnlVision.Location = new System.Drawing.Point(20, 225);
+            this.pnlVision.Name = "pnlVision";
+            this.pnlVision.Size = new System.Drawing.Size(567, 160);
+            this.pnlVision.TabIndex = 1;
+            // 
+            // lblVisionTitle
+            // 
+            this.lblVisionTitle.AutoSize = true;
+            this.lblVisionTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblVisionTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisionTitle.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.lblVisionTitle.Location = new System.Drawing.Point(24, 18);
+            this.lblVisionTitle.Name = "lblVisionTitle";
+            this.lblVisionTitle.Size = new System.Drawing.Size(195, 24);
+            this.lblVisionTitle.TabIndex = 0;
+            this.lblVisionTitle.Text = "🌟 رؤيتنا ورسالتنا المعرفية";
+            // 
+            // lblVisionDesc
+            // 
+            this.lblVisionDesc.BackColor = System.Drawing.Color.Transparent;
+            this.lblVisionDesc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisionDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.lblVisionDesc.Location = new System.Drawing.Point(24, 52);
+            this.lblVisionDesc.Name = "lblVisionDesc";
+            this.lblVisionDesc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblVisionDesc.Size = new System.Drawing.Size(519, 90);
+            this.lblVisionDesc.TabIndex = 1;
+            this.lblVisionDesc.Text = resources.GetString("lblVisionDesc.Text");
             // 
             // pnlHeader
             // 
@@ -120,287 +400,6 @@ namespace MyProjectNawwar
             this.lblSubtitle.Text = "The Value-Driven Knowledge Economy · اقتصاد المعرفة القائم على القيمة";
             this.lblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlVision
-            // 
-            this.pnlVision.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
-            this.pnlVision.BorderRadius = 14;
-            this.pnlVision.BorderThickness = 1;
-            this.pnlVision.Controls.Add(this.lblVisionTitle);
-            this.pnlVision.Controls.Add(this.lblVisionDesc);
-            this.pnlVision.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.pnlVision.Location = new System.Drawing.Point(20, 225);
-            this.pnlVision.Name = "pnlVision";
-            this.pnlVision.Size = new System.Drawing.Size(567, 160);
-            this.pnlVision.TabIndex = 1;
-            // 
-            // lblVisionTitle
-            // 
-            this.lblVisionTitle.AutoSize = true;
-            this.lblVisionTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblVisionTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisionTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(211)))), ((int)(((byte)(153)))));
-            this.lblVisionTitle.Location = new System.Drawing.Point(24, 18);
-            this.lblVisionTitle.Name = "lblVisionTitle";
-            this.lblVisionTitle.Size = new System.Drawing.Size(187, 24);
-            this.lblVisionTitle.TabIndex = 0;
-            this.lblVisionTitle.Text = "🌟 رؤيتنا ورسالتنا المعرفية";
-            // 
-            // lblVisionDesc
-            // 
-            this.lblVisionDesc.BackColor = System.Drawing.Color.Transparent;
-            this.lblVisionDesc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisionDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.lblVisionDesc.Location = new System.Drawing.Point(24, 52);
-            this.lblVisionDesc.Name = "lblVisionDesc";
-            this.lblVisionDesc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblVisionDesc.Size = new System.Drawing.Size(519, 90);
-            this.lblVisionDesc.TabIndex = 1;
-            this.lblVisionDesc.Text = "تسعى منصة نوار إلى إحداث نقلة نوعية في المحتوى الرقمي العربي من خلال تمكين الباحث" +
-    "ين والمهندسين وصناع القرار من التفاعل ومشاركة الخبرات في بيئة متقدمة تحتكم للمصدا" +
-    "قية والبرهان وتكافئ الأثر العلمي والمهني.";
-            // 
-            // pnlPillars
-            // 
-            this.pnlPillars.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
-            this.pnlPillars.BorderRadius = 14;
-            this.pnlPillars.BorderThickness = 1;
-            this.pnlPillars.Controls.Add(this.lblPillarsTitle);
-            this.pnlPillars.Controls.Add(this.lblPillar1);
-            this.pnlPillars.Controls.Add(this.lblPillar2);
-            this.pnlPillars.Controls.Add(this.lblPillar3);
-            this.pnlPillars.Controls.Add(this.lblPillar4);
-            this.pnlPillars.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.pnlPillars.Location = new System.Drawing.Point(20, 400);
-            this.pnlPillars.Name = "pnlPillars";
-            this.pnlPillars.Size = new System.Drawing.Size(567, 240);
-            this.pnlPillars.TabIndex = 2;
-            // 
-            // lblPillarsTitle
-            // 
-            this.lblPillarsTitle.AutoSize = true;
-            this.lblPillarsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblPillarsTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPillarsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.lblPillarsTitle.Location = new System.Drawing.Point(24, 18);
-            this.lblPillarsTitle.Name = "lblPillarsTitle";
-            this.lblPillarsTitle.Size = new System.Drawing.Size(185, 24);
-            this.lblPillarsTitle.TabIndex = 0;
-            this.lblPillarsTitle.Text = "💎 ركائز المنظومة الذكية";
-            // 
-            // lblPillar1
-            // 
-            this.lblPillar1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPillar1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPillar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.lblPillar1.Location = new System.Drawing.Point(24, 55);
-            this.lblPillar1.Name = "lblPillar1";
-            this.lblPillar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPillar1.Size = new System.Drawing.Size(519, 36);
-            this.lblPillar1.TabIndex = 1;
-            this.lblPillar1.Text = "1. الجلسات المعرفية التفاعلية (Knowledge Sessions): ورش عمل ونقاشات حية بين الخبراء" +
-    " والحضور.";
-            // 
-            // lblPillar2
-            // 
-            this.lblPillar2.BackColor = System.Drawing.Color.Transparent;
-            this.lblPillar2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPillar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.lblPillar2.Location = new System.Drawing.Point(24, 98);
-            this.lblPillar2.Name = "lblPillar2";
-            this.lblPillar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPillar2.Size = new System.Drawing.Size(519, 36);
-            this.lblPillar2.TabIndex = 2;
-            this.lblPillar2.Text = "2. الغرف الحوارية المنظمة (Structured Debates): مناظرات فكرية وتقنية محكمة بالأدلة" +
-    " والبراهين.";
-            // 
-            // lblPillar3
-            // 
-            this.lblPillar3.BackColor = System.Drawing.Color.Transparent;
-            this.lblPillar3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPillar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.lblPillar3.Location = new System.Drawing.Point(24, 142);
-            this.lblPillar3.Name = "lblPillar3";
-            this.lblPillar3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPillar3.Size = new System.Drawing.Size(519, 36);
-            this.lblPillar3.TabIndex = 3;
-            this.lblPillar3.Text = "3. مؤشر الثقة والمصداقية (Trust Score): نظام سمعة ذكي يمنح النقاط بناءً على جودة ال" +
-    "طرح والتوثيق.";
-            // 
-            // lblPillar4
-            // 
-            this.lblPillar4.BackColor = System.Drawing.Color.Transparent;
-            this.lblPillar4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPillar4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.lblPillar4.Location = new System.Drawing.Point(24, 186);
-            this.lblPillar4.Name = "lblPillar4";
-            this.lblPillar4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPillar4.Size = new System.Drawing.Size(519, 36);
-            this.lblPillar4.TabIndex = 4;
-            this.lblPillar4.Text = "4. توثيق المصادر (Verified Sources): ربط كل أطروحة ومساهمة بمراجع وأوراق بحثية قاب" +
-    "لة للتحقق.";
-            // 
-            // 
-            // pnlDevelopers
-            // 
-            this.pnlDevelopers.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
-            this.pnlDevelopers.BorderRadius = 14;
-            this.pnlDevelopers.BorderThickness = 1;
-            this.pnlDevelopers.Controls.Add(this.lblDevTitle);
-            this.pnlDevelopers.Controls.Add(this.pnlDev1);
-            this.pnlDevelopers.Controls.Add(this.pnlDev2);
-            this.pnlDevelopers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.pnlDevelopers.Location = new System.Drawing.Point(20, 655);
-            this.pnlDevelopers.Name = "pnlDevelopers";
-            this.pnlDevelopers.Size = new System.Drawing.Size(567, 215);
-            this.pnlDevelopers.TabIndex = 3;
-            // 
-            // lblDevTitle
-            // 
-            this.lblDevTitle.AutoSize = true;
-            this.lblDevTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblDevTitle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
-            this.lblDevTitle.Location = new System.Drawing.Point(24, 15);
-            this.lblDevTitle.Name = "lblDevTitle";
-            this.lblDevTitle.Size = new System.Drawing.Size(320, 24);
-            this.lblDevTitle.TabIndex = 0;
-            this.lblDevTitle.Text = "👨‍💻 فريق التطوير الهندسي | Development Team";
-            // 
-            // pnlDev1
-            // 
-            this.pnlDev1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
-            this.pnlDev1.BorderRadius = 10;
-            this.pnlDev1.BorderThickness = 1;
-            this.pnlDev1.Controls.Add(this.picDev1);
-            this.pnlDev1.Controls.Add(this.lblDev1Name);
-            this.pnlDev1.Controls.Add(this.lblDev1Email);
-            this.pnlDev1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.pnlDev1.Location = new System.Drawing.Point(20, 48);
-            this.pnlDev1.Name = "pnlDev1";
-            this.pnlDev1.Size = new System.Drawing.Size(527, 72);
-            this.pnlDev1.TabIndex = 1;
-            // 
-            // picDev1
-            // 
-            this.picDev1.BackColor = System.Drawing.Color.Transparent;
-            this.picDev1.ImageRotate = 0F;
-            this.picDev1.Location = new System.Drawing.Point(14, 12);
-            this.picDev1.Name = "picDev1";
-            this.picDev1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picDev1.Size = new System.Drawing.Size(48, 48);
-            this.picDev1.TabIndex = 0;
-            this.picDev1.TabStop = false;
-            // 
-            // lblDev1Name
-            // 
-            this.lblDev1Name.AutoSize = true;
-            this.lblDev1Name.BackColor = System.Drawing.Color.Transparent;
-            this.lblDev1Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDev1Name.ForeColor = System.Drawing.Color.White;
-            this.lblDev1Name.Location = new System.Drawing.Point(72, 12);
-            this.lblDev1Name.Name = "lblDev1Name";
-            this.lblDev1Name.Size = new System.Drawing.Size(212, 22);
-            this.lblDev1Name.TabIndex = 1;
-            this.lblDev1Name.Text = "1. طارق سوار | Tariq Swar";
-            // 
-            // lblDev1Email
-            // 
-            this.lblDev1Email.AutoSize = true;
-            this.lblDev1Email.BackColor = System.Drawing.Color.Transparent;
-            this.lblDev1Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDev1Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.lblDev1Email.Location = new System.Drawing.Point(72, 40);
-            this.lblDev1Email.Name = "lblDev1Email";
-            this.lblDev1Email.Size = new System.Drawing.Size(189, 18);
-            this.lblDev1Email.TabIndex = 2;
-            this.lblDev1Email.Text = "✉ eng.tariqswar@gmail.com";
-            // 
-            // pnlDev2
-            // 
-            this.pnlDev2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(98)))));
-            this.pnlDev2.BorderRadius = 10;
-            this.pnlDev2.BorderThickness = 1;
-            this.pnlDev2.Controls.Add(this.picDev2);
-            this.pnlDev2.Controls.Add(this.lblDev2Name);
-            this.pnlDev2.Controls.Add(this.lblDev2Email);
-            this.pnlDev2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(42)))), ((int)(((byte)(68)))));
-            this.pnlDev2.Location = new System.Drawing.Point(20, 130);
-            this.pnlDev2.Name = "pnlDev2";
-            this.pnlDev2.Size = new System.Drawing.Size(527, 72);
-            this.pnlDev2.TabIndex = 2;
-            // 
-            // picDev2
-            // 
-            this.picDev2.BackColor = System.Drawing.Color.Transparent;
-            this.picDev2.ImageRotate = 0F;
-            this.picDev2.Location = new System.Drawing.Point(14, 12);
-            this.picDev2.Name = "picDev2";
-            this.picDev2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picDev2.Size = new System.Drawing.Size(48, 48);
-            this.picDev2.TabIndex = 0;
-            this.picDev2.TabStop = false;
-            // 
-            // lblDev2Name
-            // 
-            this.lblDev2Name.AutoSize = true;
-            this.lblDev2Name.BackColor = System.Drawing.Color.Transparent;
-            this.lblDev2Name.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDev2Name.ForeColor = System.Drawing.Color.White;
-            this.lblDev2Name.Location = new System.Drawing.Point(72, 12);
-            this.lblDev2Name.Name = "lblDev2Name";
-            this.lblDev2Name.Size = new System.Drawing.Size(326, 22);
-            this.lblDev2Name.TabIndex = 1;
-            this.lblDev2Name.Text = "2. عبدالحميد أبوحاتم | Abdulhmeed Abo-Hatem";
-            // 
-            // lblDev2Email
-            // 
-            this.lblDev2Email.AutoSize = true;
-            this.lblDev2Email.BackColor = System.Drawing.Color.Transparent;
-            this.lblDev2Email.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDev2Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.lblDev2Email.Location = new System.Drawing.Point(72, 40);
-            this.lblDev2Email.Name = "lblDev2Email";
-            this.lblDev2Email.Size = new System.Drawing.Size(175, 18);
-            this.lblDev2Email.TabIndex = 2;
-            this.lblDev2Email.Text = "✉ eng.abdh.01@gmail.com";
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(53)))), ((int)(((byte)(77)))));
-            this.pnlFooter.BorderRadius = 14;
-            this.pnlFooter.BorderThickness = 1;
-            this.pnlFooter.Controls.Add(this.lblVersion);
-            this.pnlFooter.Controls.Add(this.lblFooter);
-            this.pnlFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(34)))), ((int)(((byte)(56)))));
-            this.pnlFooter.Location = new System.Drawing.Point(20, 885);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(567, 100);
-            this.pnlFooter.TabIndex = 4;
-            // 
-            // lblFooter
-            // 
-            this.lblFooter.BackColor = System.Drawing.Color.Transparent;
-            this.lblFooter.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFooter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(193)))), ((int)(((byte)(208)))));
-            this.lblFooter.Location = new System.Drawing.Point(10, 20);
-            this.lblFooter.Name = "lblFooter";
-            this.lblFooter.Size = new System.Drawing.Size(547, 24);
-            this.lblFooter.TabIndex = 0;
-            this.lblFooter.Text = "© 2026 NAWWAR Knowledge Platform. All Rights Reserved.";
-            this.lblFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
-            this.lblVersion.Location = new System.Drawing.Point(10, 52);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(547, 24);
-            this.lblVersion.TabIndex = 1;
-            this.lblVersion.Text = "System Version: 1.0 (Enterprise Edition)";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // AboutControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -411,12 +410,7 @@ namespace MyProjectNawwar
             this.Size = new System.Drawing.Size(607, 850);
             this.Load += new System.EventHandler(this.AboutControl_Load);
             this.pnlContainer.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.pnlVision.ResumeLayout(false);
-            this.pnlVision.PerformLayout();
-            this.pnlPillars.ResumeLayout(false);
-            this.pnlPillars.PerformLayout();
+            this.pnlFooter.ResumeLayout(false);
             this.pnlDevelopers.ResumeLayout(false);
             this.pnlDevelopers.PerformLayout();
             this.pnlDev1.ResumeLayout(false);
@@ -425,7 +419,12 @@ namespace MyProjectNawwar
             this.pnlDev2.ResumeLayout(false);
             this.pnlDev2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDev2)).EndInit();
-            this.pnlFooter.ResumeLayout(false);
+            this.pnlPillars.ResumeLayout(false);
+            this.pnlPillars.PerformLayout();
+            this.pnlVision.ResumeLayout(false);
+            this.pnlVision.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

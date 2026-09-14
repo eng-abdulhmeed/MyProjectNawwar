@@ -31,6 +31,8 @@ namespace MyProjectNawwar
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblClearSearch = new System.Windows.Forms.Label();
             this.pnlTrending = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,24 +50,22 @@ namespace MyProjectNawwar
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
             this.label14 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlTrending.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -104,7 +104,7 @@ namespace MyProjectNawwar
             this.lblClearSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(113)))), ((int)(((byte)(113)))));
             this.lblClearSearch.Location = new System.Drawing.Point(54, 98);
             this.lblClearSearch.Name = "lblClearSearch";
-            this.lblClearSearch.Size = new System.Drawing.Size(185, 18);
+            this.lblClearSearch.Size = new System.Drawing.Size(154, 18);
             this.lblClearSearch.TabIndex = 2;
             this.lblClearSearch.Text = "✕ إلغاء التصفية والعودة للكل";
             this.lblClearSearch.Visible = false;
@@ -131,9 +131,33 @@ namespace MyProjectNawwar
             this.pnlTrending.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
             this.pnlTrending.Location = new System.Drawing.Point(52, 127);
             this.pnlTrending.Name = "pnlTrending";
-            this.pnlTrending.Size = new System.Drawing.Size(348, 397);
+            this.pnlTrending.Size = new System.Drawing.Size(350, 397);
             this.pnlTrending.TabIndex = 1;
             this.pnlTrending.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTrending_Paint);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2PictureBox3.BorderRadius = 16;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(240, 245);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(105, 91);
+            this.guna2PictureBox3.TabIndex = 9;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2PictureBox1.BorderRadius = 16;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(242, 95);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(105, 91);
+            this.guna2PictureBox1.TabIndex = 9;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -144,7 +168,7 @@ namespace MyProjectNawwar
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.label10.Location = new System.Drawing.Point(20, 364);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(260, 19);
+            this.label10.Size = new System.Drawing.Size(297, 19);
             this.label10.TabIndex = 8;
             this.label10.Text = "#هندسة_البرمجيات · #معمارية_النظم";
             this.label10.Click += new System.EventHandler(this.Topic_Click);
@@ -166,7 +190,7 @@ namespace MyProjectNawwar
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
             this.label6.Location = new System.Drawing.Point(120, 325);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 21);
+            this.label6.Size = new System.Drawing.Size(159, 21);
             this.label6.TabIndex = 3;
             this.label6.Text = "#الأمن_السيبراني";
             this.label6.Click += new System.EventHandler(this.Topic_Click);
@@ -179,7 +203,7 @@ namespace MyProjectNawwar
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label7.Location = new System.Drawing.Point(14, 325);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 19);
+            this.label7.Size = new System.Drawing.Size(98, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "وسم متداول:";
             // 
@@ -191,7 +215,7 @@ namespace MyProjectNawwar
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label8.Location = new System.Drawing.Point(15, 213);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(175, 18);
+            this.label8.Size = new System.Drawing.Size(191, 18);
             this.label8.TabIndex = 5;
             this.label8.Text = "أمن سيبراني ومعلومات · رائج";
             // 
@@ -233,7 +257,7 @@ namespace MyProjectNawwar
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
             this.label4.Location = new System.Drawing.Point(120, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 21);
+            this.label4.Size = new System.Drawing.Size(170, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "#الذكاء_الاصطناعي";
             this.label4.Click += new System.EventHandler(this.Topic_Click);
@@ -246,7 +270,7 @@ namespace MyProjectNawwar
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label3.Location = new System.Drawing.Point(14, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 19);
+            this.label3.Size = new System.Drawing.Size(98, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "وسم متداول:";
             // 
@@ -258,7 +282,7 @@ namespace MyProjectNawwar
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label2.Location = new System.Drawing.Point(15, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 18);
+            this.label2.Size = new System.Drawing.Size(179, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "ذكاء اصطناعي وتطوير · رائج";
             // 
@@ -280,10 +304,10 @@ namespace MyProjectNawwar
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.label1.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label1.Location = new System.Drawing.Point(16, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 24);
+            this.label1.Size = new System.Drawing.Size(315, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "🔥 موضوعات شائعة (Trending)";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -307,7 +331,7 @@ namespace MyProjectNawwar
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
             this.guna2Panel1.Location = new System.Drawing.Point(52, 583);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(348, 218);
+            this.guna2Panel1.Size = new System.Drawing.Size(357, 218);
             this.guna2Panel1.TabIndex = 1;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTrending_Paint);
             // 
@@ -360,10 +384,21 @@ namespace MyProjectNawwar
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(161)))), ((int)(((byte)(242)))));
             this.label15.Location = new System.Drawing.Point(25, 184);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(150, 19);
+            this.label15.Size = new System.Drawing.Size(161, 19);
             this.label15.TabIndex = 8;
             this.label15.Text = "تصفح المزيد من الخبراء";
             this.label15.Click += new System.EventHandler(this.lblShowMoreExperts_Click);
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(18, 117);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.guna2CirclePictureBox2.TabIndex = 3;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // guna2Separator5
             // 
@@ -381,6 +416,17 @@ namespace MyProjectNawwar
             this.guna2Separator4.Size = new System.Drawing.Size(350, 1);
             this.guna2Separator4.TabIndex = 2;
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 52);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.guna2CirclePictureBox1.TabIndex = 3;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // guna2Separator6
             // 
             this.guna2Separator6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(68)))), ((int)(((byte)(76)))));
@@ -397,7 +443,7 @@ namespace MyProjectNawwar
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label14.Location = new System.Drawing.Point(72, 144);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(155, 18);
+            this.label14.Size = new System.Drawing.Size(171, 18);
             this.label14.TabIndex = 0;
             this.label14.Text = "@faisal.sh · أمن سيبراني";
             // 
@@ -406,10 +452,10 @@ namespace MyProjectNawwar
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(211)))), ((int)(((byte)(153)))));
+            this.label20.ForeColor = System.Drawing.Color.LightSlateGray;
             this.label20.Location = new System.Drawing.Point(16, 11);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(305, 24);
+            this.label20.Size = new System.Drawing.Size(340, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "👥 خبراء مقترحون (Who to follow)";
             // 
@@ -422,7 +468,7 @@ namespace MyProjectNawwar
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.label13.Location = new System.Drawing.Point(72, 124);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 19);
+            this.label13.Size = new System.Drawing.Size(134, 19);
             this.label13.TabIndex = 0;
             this.label13.Text = "أ. فيصل الشمري";
             this.label13.Click += new System.EventHandler(this.Author2_Click);
@@ -435,7 +481,7 @@ namespace MyProjectNawwar
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(153)))), ((int)(((byte)(166)))));
             this.label12.Location = new System.Drawing.Point(72, 80);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(155, 18);
+            this.label12.Size = new System.Drawing.Size(176, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "@sara.ahmed · باحثة ذكاء";
             // 
@@ -448,56 +494,10 @@ namespace MyProjectNawwar
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.label11.Location = new System.Drawing.Point(72, 59);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 19);
+            this.label11.Size = new System.Drawing.Size(119, 19);
             this.label11.TabIndex = 0;
             this.label11.Text = "د. سارة الأحمد";
             this.label11.Click += new System.EventHandler(this.Author1_Click);
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(18, 117);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.guna2CirclePictureBox2.TabIndex = 3;
-            this.guna2CirclePictureBox2.TabStop = false;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 52);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.guna2CirclePictureBox1.TabIndex = 3;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2PictureBox3.BorderRadius = 16;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(240, 245);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(105, 91);
-            this.guna2PictureBox3.TabIndex = 9;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2PictureBox1.BorderRadius = 16;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(29)))), ((int)(((byte)(46)))));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(242, 95);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(105, 91);
-            this.guna2PictureBox1.TabIndex = 9;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // SearchSidebar
             // 
@@ -515,12 +515,12 @@ namespace MyProjectNawwar
             this.Load += new System.EventHandler(this.SearchSidebar_Load);
             this.pnlTrending.ResumeLayout(false);
             this.pnlTrending.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
