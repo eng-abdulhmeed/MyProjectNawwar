@@ -164,6 +164,17 @@
     <Compile Include="AboutControl.Designer.cs">
       <DependentUpon>AboutControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="copy\AppAssets.cs" />
+    <Compile Include="copy\AvatarHelper.cs" />
+    <Compile Include="copy\DatabaseHelper.cs" />
+    <Compile Include="copy\SessionManager.cs" />
+    <Compile Include="copy\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="copy\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="copy\UserService.cs" />
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="EditProfileForm.cs">
       <SubType>Form</SubType>
