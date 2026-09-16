@@ -96,5 +96,10 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void Log_in_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

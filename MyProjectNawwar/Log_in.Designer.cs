@@ -558,6 +558,7 @@ namespace MyProjectNawwar
             this.Controls.Add(this.pnlRight);
             this.Name = "Log_in";
             this.Text = "Log_in";
+            this.Load += new System.EventHandler(this.Log_in_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoRight)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
