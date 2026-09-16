@@ -214,6 +214,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(134, 34);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Join Session.";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2HtmlLabel16
             // 
@@ -365,6 +366,7 @@
             this.guna2HtmlLabel24.Size = new System.Drawing.Size(83, 24);
             this.guna2HtmlLabel24.TabIndex = 9;
             this.guna2HtmlLabel24.Text = "@dr.smith";
+            this.guna2HtmlLabel24.Click += new System.EventHandler(this.guna2HtmlLabel24_Click);
             // 
             // guna2HtmlLabel25
             // 

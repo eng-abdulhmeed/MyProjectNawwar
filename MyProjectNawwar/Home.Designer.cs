@@ -152,6 +152,7 @@
             // 
             // guna2Panel3
             // 
+            this.guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.guna2Panel3.Controls.Add(this.guna2Button1);
             this.guna2Panel3.Controls.Add(this.guna2ImageButton3);
             this.guna2Panel3.Controls.Add(this.guna2ImageButton2);
@@ -163,6 +164,7 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(672, 100);
             this.guna2Panel3.TabIndex = 15;
+            this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint_1);
             // 
             // guna2Button1
             // 
@@ -248,6 +250,7 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(490, 30);
             this.guna2TextBox1.TabIndex = 7;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2CirclePictureBox1
             // 

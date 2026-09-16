@@ -316,5 +316,15 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
