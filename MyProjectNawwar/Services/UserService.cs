@@ -4,6 +4,11 @@ using Microsoft.Data.SqlClient;
 using MyProjectNawwar.Data;
 using MyProjectNawwar.Models;
 
+using System.Data;
+
+
+
+
 namespace MyProjectNawwar.Services
 {
     public class UserService
@@ -157,94 +162,151 @@ namespace MyProjectNawwar.Services
         }
 
         // دالة تحديث بيانات الملف الشخصي (Edit Profile)
-        public bool UpdateProfile(Guid userId, string fullName, string email, string newPassword, out string message)
+
+
+
+
+        public bool UpdateProfile(
+            Guid userId,
+            string fullName,
+            string email,
+            string newPassword,
+            out string message)
         {
-            if (string.IsNullOrWhiteSpace(fullName))
-            {
-                message = "يرجى إدخال الاسم الكامل.";
-                return false;
-            }
-
-            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            if (string.IsNullOrWhiteSpace(email) || !Regex.IsMatch(email.Trim(), emailPattern, RegexOptions.IgnoreCase))
-            {
-                message = "صيغة البريد الإلكتروني غير صحيحة.";
-                return false;
-            }
-
             try
             {
                 using (SqlConnection conn = _dbHelper.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(
+                    "UpdateUserProfile", conn))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier)
+                        .Value = userId;
+
+                    cmd.Parameters.Add("@Full_Name", SqlDbType.NVarChar, 100)
+                        .Value = fullName.Trim();
+
+                    cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100)
+                        .Value = email.Trim();
+
                     conn.Open();
 
-                    // 1. التأكد من أن البريد الجديد غير مستخدم من حساب آخر
-                    string checkEmailQuery = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND ID <> @ID";
-                    using (SqlCommand checkCmd = new SqlCommand(checkEmailQuery, conn))
-                    {
-                        checkCmd.Parameters.AddWithValue("@Email", email.Trim());
-                        checkCmd.Parameters.AddWithValue("@ID", userId);
+                    int rows = cmd.ExecuteNonQuery();
 
-                        int count = (int)checkCmd.ExecuteScalar();
-                        if (count > 0)
-                        {
-                            message = "عذراً، هذا البريد الإلكتروني مستخدم لحساب آخر.";
-                            return false;
-                        }
+                    if (rows > 0)
+                    {
+                        SessionManager.LoadUser(userId);
+
+                        message = "تم تحديث بيانات الملف الشخصي بنجاح!";
+                        return true;
                     }
 
-                    // 2. تحديث البيانات
-                    string updateQuery;
-                    if (!string.IsNullOrWhiteSpace(newPassword))
-                    {
-                        updateQuery = @"
-                            UPDATE Users
-                            SET Full_Name = @FullName,
-                                Email = @Email,
-                                Password_Hash = @Password
-                            WHERE ID = @ID";
-                    }
-                    else
-                    {
-                        updateQuery = @"
-                            UPDATE Users
-                            SET Full_Name = @FullName,
-                                Email = @Email
-                            WHERE ID = @ID";
-                    }
-
-                    using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
-                    {
-                        updateCmd.Parameters.AddWithValue("@FullName", fullName.Trim());
-                        updateCmd.Parameters.AddWithValue("@Email", email.Trim());
-                        updateCmd.Parameters.AddWithValue("@ID", userId);
-
-                        if (!string.IsNullOrWhiteSpace(newPassword))
-                        {
-                            updateCmd.Parameters.AddWithValue("@Password", newPassword);
-                        }
-
-                        int rows = updateCmd.ExecuteNonQuery();
-                        if (rows > 0)
-                        {
-                            // تحديث الجلسة بالبيانات الجديدة مباشرة
-                            SessionManager.LoadUser(userId);
-                            message = "تم تحديث بيانات الملف الشخصي بنجاح!";
-                            return true;
-                        }
-                        else
-                        {
-                            message = "لم يتم العثور على الحساب المطلوب تحديثه.";
-                            return false;
-                        }
-                    }
+                    message = "لم يتم العثور على الحساب.";
+                    return false;
                 }
             }
             catch (Exception ex)
             {
-                message = "حدث خطأ أثناء تحديث البيانات: " + ex.Message;
+                message = "حدث خطأ أثناء التحديث: " + ex.Message;
                 return false;
             }
         }
+
+
+
+
+
+
+
+        /*   public bool UpdateProfile(Guid userId, string fullName, string email, string newPassword, out string message)
+           {
+               if (string.IsNullOrWhiteSpace(fullName))
+               {
+                   message = "يرجى إدخال الاسم الكامل.";
+                   return false;
+               }
+
+               string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+               if (string.IsNullOrWhiteSpace(email) || !Regex.IsMatch(email.Trim(), emailPattern, RegexOptions.IgnoreCase))
+               {
+                   message = "صيغة البريد الإلكتروني غير صحيحة.";
+                   return false;
+               }
+
+               try
+               {
+                   using (SqlConnection conn = _dbHelper.GetConnection())
+                   {
+                       conn.Open();
+
+                       // 1. التأكد من أن البريد الجديد غير مستخدم من حساب آخر
+                       string checkEmailQuery = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND ID <> @ID";
+                       using (SqlCommand checkCmd = new SqlCommand(checkEmailQuery, conn))
+                       {
+                           checkCmd.Parameters.AddWithValue("@Email", email.Trim());
+                           checkCmd.Parameters.AddWithValue("@ID", userId);
+
+                           int count = (int)checkCmd.ExecuteScalar();
+                           if (count > 0)
+                           {
+                               message = "عذراً، هذا البريد الإلكتروني مستخدم لحساب آخر.";
+                               return false;
+                           }
+                       }
+
+                       // 2. تحديث البيانات
+                       string updateQuery;
+                       if (!string.IsNullOrWhiteSpace(newPassword))
+                       {
+                           updateQuery = @"
+                               UPDATE Users
+                               SET Full_Name = @FullName,
+                                   Email = @Email,
+                                   Password_Hash = @Password
+                               WHERE ID = @ID";
+                       }
+                       else
+                       {
+                           updateQuery = @"
+                               UPDATE Users
+                               SET Full_Name = @FullName,
+                                   Email = @Email
+                               WHERE ID = @ID";
+                       }
+
+                       using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                       {
+                           updateCmd.Parameters.AddWithValue("@FullName", fullName.Trim());
+                           updateCmd.Parameters.AddWithValue("@Email", email.Trim());
+                           updateCmd.Parameters.AddWithValue("@ID", userId);
+
+                           if (!string.IsNullOrWhiteSpace(newPassword))
+                           {
+                               updateCmd.Parameters.AddWithValue("@Password", newPassword);
+                           }
+
+                           int rows = updateCmd.ExecuteNonQuery();
+                           if (rows > 0)
+                           {
+                               // تحديث الجلسة بالبيانات الجديدة مباشرة
+                               SessionManager.LoadUser(userId);
+                               message = "تم تحديث بيانات الملف الشخصي بنجاح!";
+                               return true;
+                           }
+                           else
+                           {
+                               message = "لم يتم العثور على الحساب المطلوب تحديثه.";
+                               return false;
+                           }
+                       }
+                   }
+               }
+               catch (Exception ex)
+               {
+                   message = "حدث خطأ أثناء تحديث البيانات: " + ex.Message;
+                   return false;
+               }
+           }*/
     }
 }
