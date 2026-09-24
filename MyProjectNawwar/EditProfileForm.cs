@@ -137,5 +137,10 @@ namespace MyProjectNawwar
         {
 
         }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

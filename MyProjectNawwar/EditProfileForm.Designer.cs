@@ -90,7 +90,7 @@ namespace MyProjectNawwar
             // 
             this.picAvatar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(125)))), ((int)(((byte)(165)))));
             this.picAvatar.ImageRotate = 0F;
-            this.picAvatar.Location = new System.Drawing.Point(200, 76);
+            this.picAvatar.Location = new System.Drawing.Point(196, 76);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.picAvatar.Size = new System.Drawing.Size(80, 80);
@@ -115,9 +115,10 @@ namespace MyProjectNawwar
             this.labelName.ForeColor = System.Drawing.Color.White;
             this.labelName.Location = new System.Drawing.Point(40, 196);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(151, 18);
+            this.labelName.Size = new System.Drawing.Size(92, 18);
             this.labelName.TabIndex = 3;
-            this.labelName.Text = "الاسم الكامل (Full Name)";
+            this.labelName.Text = " (Full Name)";
+            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // txtFullName
             // 
@@ -157,9 +158,9 @@ namespace MyProjectNawwar
             this.labelEmail.ForeColor = System.Drawing.Color.White;
             this.labelEmail.Location = new System.Drawing.Point(40, 290);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(202, 18);
+            this.labelEmail.Size = new System.Drawing.Size(121, 18);
             this.labelEmail.TabIndex = 6;
-            this.labelEmail.Text = "البريد الإلكتروني (Email Address)";
+            this.labelEmail.Text = " (Email Address)";
             // 
             // txtEmail
             // 
@@ -199,9 +200,9 @@ namespace MyProjectNawwar
             this.labelPass.ForeColor = System.Drawing.Color.White;
             this.labelPass.Location = new System.Drawing.Point(40, 384);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(264, 18);
+            this.labelPass.Size = new System.Drawing.Size(126, 18);
             this.labelPass.TabIndex = 9;
-            this.labelPass.Text = "تغيير كلمة المرور (New Password - اختياري)";
+            this.labelPass.Text = " (New Password)";
             // 
             // txtPassword
             // 
@@ -233,7 +234,7 @@ namespace MyProjectNawwar
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(195, 45);
             this.btnSave.TabIndex = 11;
-            this.btnSave.Text = "حفظ التعديلات | Save";
+            this.btnSave.Text = " Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
@@ -248,7 +249,7 @@ namespace MyProjectNawwar
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(195, 45);
             this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "إلغاء | Cancel";
+            this.btnCancel.Text = " Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // EditProfileForm
